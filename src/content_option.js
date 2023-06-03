@@ -1,3 +1,4 @@
+import hiteshImg from './assets/images/hitesh.jpeg'
 const logotext = "HITESH";
 const meta = {
     title: "Hitesh Dodiya",
@@ -12,13 +13,14 @@ const introdata = {
         third: "I develop web apps",
     },
     description: "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
-    your_img_url: "https://images.unsplash.com/photo-151                  j4790193030-c89d266d5a9d",
+    your_img_url: hiteshImg,
 };
 
 const dataabout = {
-    title: "About my self",
+    title: "About My Self",
     aboutme: "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
 };
+
 const worktimeline = [{
     jobtitle: "Mern stack developer at Cypherox technology",
     where: "Rajkot, Gujarat, India",
