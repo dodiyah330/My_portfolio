@@ -70,6 +70,10 @@
     padding-bottom: 4px;
 }
 
+.caption-top {
+    caption-side: top;
+    --bs-table-bg: none;
+}
 
 /*! CSS Used keyframes */
 
