@@ -32,9 +32,14 @@ const worktimeline = [{
     date: "05/2022 - 06/2022",
 },
 {
+    jobtitle: "Mern stack developer at Besticoder",
+    where: "Keshod, Gujarat, India",
+    date: "05/2021-02/2022",
+},
+{
     jobtitle: "Mern stack developer- trainee at Besticoder",
     where: "Keshod, Gujarat, India",
-    date: "02/2021-02/2022",
+    date: "02/2021-04/2021",
 },
 ];
 
@@ -68,6 +73,10 @@ const skills = [{
 },
 {
     name: "MondoDB",
+    value: 65,
+},
+{
+    name: "Github",
     value: 65,
 },
 ];
