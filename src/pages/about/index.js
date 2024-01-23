@@ -9,6 +9,8 @@ import {
   skills,
   services,
 } from "../../content_option";
+import { Link } from "react-router-dom/dist";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export const About = () => {
   return (
@@ -81,13 +83,18 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">Services</h3>
+            <h3 className="color_sec py-4">Projects</h3>
           </Col>
           <Col lg="7">
             {services.map((data, i) => {
               return (
                 <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
+                  <h5 className="service__title">
+                    {data.title}
+                    <Link to={data.link} target={data.link && "_blank"}>
+                      <FaExternalLinkAlt />
+                    </Link>
+                  </h5>
                   <p className="service_desc">{data.description}</p>
                 </div>
               );

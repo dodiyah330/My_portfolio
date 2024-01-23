@@ -1,196 +1,245 @@
-import hiteshImg from './assets/images/hitesh.jpeg'
+import hiteshImg from "./assets/images/hitesh.jpeg";
 const logotext = "HITESH";
 const meta = {
-    title: "Hitesh Dodiya",
-    description: "I’m Hitesh Dodiya MERN stack devloper,currently working in Rajkot",
+  title: "Hitesh Dodiya",
+  description:
+    "I’m Hitesh Dodiya MERN stack devloper,currently working in Rajkot",
 };
 
 const introdata = {
-    title: "I’m Hitesh Dodiya",
-    animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop web apps",
-    },
-    description: "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
-    your_img_url: hiteshImg,
+  title: "I’m Hitesh Dodiya",
+  animated: {
+    first: "I love coding",
+    second: "I code cool websites",
+    third: "I develop web apps",
+  },
+  description:
+    "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+  your_img_url: hiteshImg,
 };
 
 const dataabout = {
-    title: "About My Self",
-    aboutme: "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+  title: "About My Self",
+  aboutme:
+    "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
 };
 
-const worktimeline = [{
+const worktimeline = [
+  {
     jobtitle: "Mern stack developer at Cypherox technology",
     where: "Rajkot, Gujarat, India",
     date: "06/2022 - 07/2023",
-},
-{
+  },
+  {
     jobtitle: "Mern stack developer- trainee at Cypherox technology",
     where: "Rajkot, Gujarat, India",
     date: "05/2022 - 06/2022",
-},
-{
+  },
+  {
     jobtitle: "Mern stack developer at Besticoder",
     where: "Keshod, Gujarat, India",
     date: "05/2021-02/2022",
-},
-{
+  },
+  {
     jobtitle: "Mern stack developer- trainee at Besticoder",
     where: "Keshod, Gujarat, India",
     date: "02/2021-04/2021",
-},
+  },
 ];
 
-const skills = [{
-    name: "HTML",
-    value: 80,
-},
-{
-    name: "CSS",
-    value: 80,
-},
-{
-    name: "Javascript",
-    value: 85,
-},
-{
-    name: "Bootstrap",
-    value: 75,
-},
-{
+const skills = [
+  {
     name: "ReactJS",
     value: 90,
-},
-{
+  },
+  {
+    name: "Javascript",
+    value: 85,
+  },
+  {
+    name: "HTML",
+    value: 80,
+  },
+  {
+    name: "CSS",
+    value: 80,
+  },
+
+  {
+    name: "Bootstrap",
+    value: 75,
+  },
+  {
+    name: "Github",
+    value: 70,
+  },
+  {
     name: "NodeJS",
-    value: 60,
-},
-{
+    value: 70,
+  },
+  {
     name: "ExpressJS",
-    value: 60,
-},
-{
+    value: 70,
+  },
+  {
     name: "MondoDB",
     value: 65,
-},
-{
-    name: "Github",
-    value: 65,
-},
+  },
+  {
+    name: "NextJS",
+    value: 60,
+  },
+  {
+    name: "Typescript",
+    value: 60,
+  },
 ];
 
-const services = [{
+const services = [
+  {
+    title: "Berry Family Services",
+    link: "https://berryfamilyservices.com/",
+    description: `Meeting the needs of the disabled and their families with Texas HCS Programs, Disability Services, and Mental Health Services.As a full-stack developer, I have used RectJS with Minimal UI for designing purposes. Also, I have experience working with 8base and Auth0 with React, which gave me insight into how to integrate third-party authentication and backend services. Also, designed a relation base data table Using 8base GUI.I have used GraphQL as a query language. Also, I have used GitLab for version control and collaboration.Used Clickup project management tool.`,
+  },
+  {
+    title: "Professional Hair Labs",
+    link: "https://www.prohairlabs.com/",
+    description: `Manufacturer and supplier of premium hair products. Find the world's best cosmetic adhesive for wigs & hairpieces! I built an e-commerce site using ReactJS, MUI, Redux-Toolkit & other required libraries as the front-end developer, which helped me enhance my skills in creating a visually appealing and user-friendly web application.API integration with improved customer experience & scalability.Integrate Nodemailer to send Invoice and required emails. Performed payment gateway integration. Also, I have used the GitHub for version control and collaboration.`,
+  },
+  {
+    title: "Eagle Property Management",
+    link: "https://eimproperties.com/",
+    description: `Eagle is a local family-owned business and is dedicated to helping Portland property owners grow.One of my notable experiences includes working on a property management system project using React JS, Typescript, MUI, Express JS, MongoDB, and Node JS. I utilized Redux Thunk for state management, which helped me in creating an efficient and scalable application. Perform Mongodb aggregation operations into NodeJS APIs. Used Trello as a project management tool. Also, I have used GitHub for version control and collaboration.`,
+  },
+  {
+    title: "Revidit",
+    description: `The Video editing tool. I contributed to a video editing app built using ReactJS and react-player as a front-end developer, where I added new features like uploading the video as per size limit and also built the video Editor UI for seamless performance. Also, I have used the Bitbucket for version control and collaboration`,
+  },
+  {
+    title: "Portfolio site",
+    link: "https://hitesh-dodiya.netlify.app/",
+    description: `I successfully developed this my portfolio website using Next.js, leveraging its powerful functionalities for efficient and seamless performance. Additionally,
+    I integrated the Email.js library to implement a responsive contact form, ensuring a streamlined communication channel. The combination of Next.js and Email.js enhances both the user experience and the functionality of the website, showcasing my skills in web development.`,
+  },
+  {
+    title: "Client Details Organiser",
+    link: "https://client-organizer-client-inoe6hezx-dodiyah330.vercel.app/",
+    description: `I crafted a Client Details Organizer using React.js, Node.js, Express.js, and MongoDB.
+    Leveraging Material-UI (MUI) for a sleek design, the application efficiently stores and manages client information, showcasing my proficiency in full-stack development.`,
+  },
+  {
     title: "E-Resume",
-    description: `As a MERN stack developer, I worked on a project called E-Resume, which aimed to provide users with an easy way to create and download resumes in just a few minutes.
-    The application featured essential functionalities such as user registration and login, which
-    were secured with authentication to ensure the privacy of user data. Users could make
-    multiple resumes and edit or delete them as per their requirements.
-     To make the process even more convenient for users, the application offered demo resumes
-    in various fields, making it easier to understand and create resumes based on the user's
-    career interests.
-     Finally, users could download their resumes in PDF format, making it easier to share their
-    resumes with potential employers.
-     The project was developed using ReactJs for the frontend, ExpressJs for the backend, and
-    MySQL for data management, ensuring a scalable and efficient application that met the
-    needs of the users.`,
-},
-{
+    description: `Create Your Online Resume with E-Resume. I created an E-Resume, simplifying resume building with user registration, secure authentication, and the ability to craft, edit, and download multiple resumes.
+    The application, developed using ReactJs, ExpressJs, and MySQL, offers a seamless experience with demo templates and PDF downloads for user convenience.`,
+  },
+  {
     title: "Chat App",
-    description: "Introducing our cutting-edge chat app built with ReactJS, NodeJS, ExpressJS, and Socket.IO! With a sleek and intuitive user interface, this app offers seamless communication, real-time messaging, and an immersive chatting experience. Stay connected with friends, family, and colleagues like never before. Experience the perfect blend of advanced technology and captivating design, all in one powerful chat application.",
-}
+    description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
+  },
 ];
 
-const dataportfolio = [{
+const dataportfolio = [
+  {
     img: "https://picsum.photos/400/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/800/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/600/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/300/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/700/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
+  },
 
-{
+  {
     img: "https://picsum.photos/400/600/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/300/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/550/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
-{
+  },
+  {
     img: "https://picsum.photos/400/700/?grayscale",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description:
+      "The wisdom of life consists in the elimination of non-essentials.",
     link: "#",
-},
+  },
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "dodiyah330@gmail.com",
-    YOUR_FONE: "9725797443",
-    description: "Get in touch with me today. We'd love to hear from you!",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_woiw6zs",
-    YOUR_TEMPLATE_ID: "template_id8ozl4",
-    YOUR_USER_ID: "vRrZPICUjDEsamWOt",
+  YOUR_EMAIL: "dodiyah330@gmail.com",
+  YOUR_FONE: "9725797443",
+  description: "Get in touch with me today. We'd love to hear from you!",
+  // creat an emailjs.com account
+  // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
+  YOUR_SERVICE_ID: "service_woiw6zs",
+  YOUR_TEMPLATE_ID: "template_id8ozl4",
+  YOUR_USER_ID: "vRrZPICUjDEsamWOt",
 };
 
 const socialprofils = {
-    github: "https://github.com/dodiyah330",
-    facebook: "https://www.facebook.com/profile.php?id=100064943934105",
-    linkedin: "https://www.linkedin.com/in/hitesh-dodiya-4061171b2/",
-    // twitter: "https://twitter.com",
+  github: "https://github.com/dodiyah330",
+  facebook: "https://www.facebook.com/profile.php?id=100064943934105",
+  linkedin: "https://www.linkedin.com/in/hitesh-dodiya-4061171b2/",
+  // twitter: "https://twitter.com",
 };
 export {
-    meta,
-    dataabout,
-    dataportfolio,
-    worktimeline,
-    skills,
-    services,
-    introdata,
-    contactConfig,
-    socialprofils,
-    logotext,
+  meta,
+  dataabout,
+  dataportfolio,
+  worktimeline,
+  skills,
+  services,
+  introdata,
+  contactConfig,
+  socialprofils,
+  logotext,
 };
