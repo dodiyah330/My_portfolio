@@ -3,15 +3,15 @@ const logotext = "HITESH";
 const meta = {
   title: "Hitesh Dodiya",
   description:
-    "I’m Hitesh Dodiya MERN stack devloper,currently working in Rajkot",
+    "I’m Hitesh Dodiya MERN stack devloper,currently working in Ahmedabad",
 };
 
 const introdata = {
   title: "I’m Hitesh Dodiya",
   animated: {
-    first: "I love coding",
-    second: "I code cool websites",
-    third: "I develop web apps",
+    first: "Craft captivating experiences",
+    second: "Problem-solving powerhouse",
+    third: "Passionate collaborator",
   },
   description:
     "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
@@ -110,6 +110,11 @@ const services = [
     title: "Eagle Property Management",
     link: "https://eimproperties.com/",
     description: `Eagle is a local family-owned business and is dedicated to helping Portland property owners grow.One of my notable experiences includes working on a property management system project using React JS, Typescript, MUI, Express JS, MongoDB, and Node JS. I utilized Redux Thunk for state management, which helped me in creating an efficient and scalable application. Perform Mongodb aggregation operations into NodeJS APIs. Used Trello as a project management tool. Also, I have used GitHub for version control and collaboration.`,
+  },
+  {
+    title: "Chat Omni",
+    link: "https://www.chatomni.app/",
+    description: `The first customer-focused platform with over 15 social and communications channels built in. I developed a responsive Shopify extension as a front-end developer. Built with ReactJS and MUI, it boasts a user-friendly interface that adapts seamlessly to any device. Leveraging Yup and Formik, I implemented robust form validation, ensuring data accuracy from users. The entire experience, from layout to interaction, is optimized for smooth operation within Shopify's iframe environment.`,
   },
   {
     title: "Revidit",
