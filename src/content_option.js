@@ -26,25 +26,30 @@ const dataabout = {
 
 const worktimeline = [
   {
+    jobtitle: "Mern stack developer at Shine infosoft",
+    where: "Ahmedabd, Gujarat, India",
+    date: "10/2023 - Present",
+  },
+  {
     jobtitle: "Mern stack developer at Cypherox technology",
     where: "Rajkot, Gujarat, India",
-    date: "06/2022 - 07/2023",
+    date: "05/2022 - 07/2023",
   },
-  {
-    jobtitle: "Mern stack developer- trainee at Cypherox technology",
-    where: "Rajkot, Gujarat, India",
-    date: "05/2022 - 06/2022",
-  },
+  // {
+  //   jobtitle: "Mern stack developer- trainee at Cypherox technology",
+  //   where: "Rajkot, Gujarat, India",
+  //   date: "05/2022 - 06/2022",
+  // },
   {
     jobtitle: "Mern stack developer at Besticoder",
-    where: "Keshod, Gujarat, India",
-    date: "05/2021-02/2022",
+    where: "Remote",
+    date: "02/2021-02/2022",
   },
-  {
-    jobtitle: "Mern stack developer- trainee at Besticoder",
-    where: "Keshod, Gujarat, India",
-    date: "02/2021-04/2021",
-  },
+  // {
+  //   jobtitle: "Mern stack developer- trainee at Besticoder",
+  //   where: "Remote",
+  //   date: "02/2021-04/2021",
+  // },
 ];
 
 const skills = [
@@ -64,21 +69,20 @@ const skills = [
     name: "CSS",
     value: 80,
   },
-
-  {
-    name: "Bootstrap",
-    value: 75,
-  },
-  {
-    name: "Github",
-    value: 70,
-  },
   {
     name: "NodeJS",
     value: 70,
   },
   {
+    name: "8base",
+    value: 70,
+  },
+  {
     name: "ExpressJS",
+    value: 70,
+  },
+  {
+    name: "Github",
     value: 70,
   },
   {
@@ -93,14 +97,18 @@ const skills = [
     name: "Typescript",
     value: 60,
   },
+  {
+    name: "AWS Serverless functions",
+    value: 60,
+  },
 ];
 
 const services = [
-  {
-    title: "Berry Family Services",
-    link: "https://berryfamilyservices.com/",
-    description: `Meeting the needs of the disabled and their families with Texas HCS Programs, Disability Services, and Mental Health Services.As a full-stack developer, I have used RectJS with Minimal UI for designing purposes. Also, I have experience working with 8base and Auth0 with React, which gave me insight into how to integrate third-party authentication and backend services. Also, designed a relation base data table Using 8base GUI.I have used GraphQL as a query language. Also, I have used GitLab for version control and collaboration.Used Clickup project management tool.`,
-  },
+  // {
+  //   title: "Berry Family Services",
+  //   link: "https://berryfamilyservices.com/",
+  //   description: `Meeting the needs of the disabled and their families with Texas HCS Programs, Disability Services, and Mental Health Services.As a full-stack developer, I have used RectJS with Minimal UI for designing purposes. Also, I have experience working with 8base and Auth0 with React, which gave me insight into how to integrate third-party authentication and backend services. Also, designed a relation base data table Using 8base GUI.I have used GraphQL as a query language. Also, I have used GitLab for version control and collaboration.Used Clickup project management tool.`,
+  // },
   {
     title: "Professional Hair Labs",
     link: "https://www.prohairlabs.com/",
@@ -120,12 +128,12 @@ const services = [
     title: "Revidit",
     description: `The Video editing tool. I contributed to a video editing app built using ReactJS and react-player as a front-end developer, where I added new features like uploading the video as per size limit and also built the video Editor UI for seamless performance. Also, I have used the Bitbucket for version control and collaboration`,
   },
-  {
-    title: "Portfolio site",
-    link: "https://hitesh-dodiya.netlify.app/",
-    description: `I successfully developed this my portfolio website using Next.js, leveraging its powerful functionalities for efficient and seamless performance. Additionally,
-    I integrated the Email.js library to implement a responsive contact form, ensuring a streamlined communication channel. The combination of Next.js and Email.js enhances both the user experience and the functionality of the website, showcasing my skills in web development.`,
-  },
+  // {
+  //   title: "Portfolio site",
+  //   link: "https://hitesh-dodiya.netlify.app/",
+  //   description: `I successfully developed this my portfolio website using Next.js, leveraging its powerful functionalities for efficient and seamless performance. Additionally,
+  //   I integrated the Email.js library to implement a responsive contact form, ensuring a streamlined communication channel. The combination of Next.js and Email.js enhances both the user experience and the functionality of the website, showcasing my skills in web development.`,
+  // },
   {
     title: "Client Details Organiser",
     link: "https://client-organizer-client-inoe6hezx-dodiyah330.vercel.app/",
@@ -133,14 +141,29 @@ const services = [
     Leveraging Material-UI (MUI) for a sleek design, the application efficiently stores and manages client information, showcasing my proficiency in full-stack development.`,
   },
   {
-    title: "E-Resume",
-    description: `Create Your Online Resume with E-Resume. I created an E-Resume, simplifying resume building with user registration, secure authentication, and the ability to craft, edit, and download multiple resumes.
-    The application, developed using ReactJs, ExpressJs, and MySQL, offers a seamless experience with demo templates and PDF downloads for user convenience.`,
+    title: "National Service Providers",
+    link: "https://nsp-admin.tlcengine.com/",
+    description: `As a MERN Stack Developer, I played a pivotal role in the development of the Design Nation Service Providers (NSP) Admin panel project. Leveraging my expertise in frontend development, I contributed to the creation of a robust and scalable platform that serves as a centralized hub for service providers in the design industry using NextJS with Typescript.`,
   },
   {
-    title: "Chat App",
-    description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
+    title: "Web Assessment",
+    link: "https://web-assessment-app.vercel.app/",
+    description: `Our web assessment project empowers administrators to create customizable assessments by adding models, each comprising questions and options. Once created, administrators can easily share assessment links with users. Users can then answer the questions, with their responses securely stored in MongoDB. This setup enables administrators to view and analyze user-specific answers, providing valuable insights for assessment evaluation and improvement. It's build with ReactJS with Typescript and ExpressJS.`,
   },
+  {
+    title: "Adam Sea",
+    link: "https://www.adamsea.com/",
+    description: `It's an e-commerce platform tailored for boat enthusiasts, where I played a pivotal role as a front-end developer. Our website offers a seamless browsing and purchasing experience for a diverse range of boats. Which is built with ReactJS with Typescript, Redux.`,
+  },
+  // {
+  //   title: "E-Resume",
+  //   description: `Create Your Online Resume with E-Resume. I created an E-Resume, simplifying resume building with user registration, secure authentication, and the ability to craft, edit, and download multiple resumes.
+  //   The application, developed using ReactJs, ExpressJs, and MySQL, offers a seamless experience with demo templates and PDF downloads for user convenience.`,
+  // },
+  // {
+  //   title: "Chat App",
+  //   description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
+  // },
 ];
 
 const dataportfolio = [
