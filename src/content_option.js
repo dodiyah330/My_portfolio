@@ -3,7 +3,7 @@ const logotext = "HITESH";
 const meta = {
   title: "Hitesh Dodiya",
   description:
-    "I’m Hitesh Dodiya MERN stack devloper,currently working in Ahmedabad",
+    "I’m Hitesh Dodiya full-stack devloper,currently working as a freelancer",
 };
 
 const introdata = {
@@ -14,42 +14,42 @@ const introdata = {
     third: "Passionate collaborator",
   },
   description:
-    "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+    "As a full-stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
   your_img_url: hiteshImg,
 };
 
 const dataabout = {
   title: "About My Self",
   aboutme:
-    "As a MERN stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+    "As a full-stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
 };
 
 const worktimeline = [
   {
-    jobtitle: "Mern stack developer at Shine infosoft",
-    where: "Ahmedabd, Gujarat, India",
-    date: "10/2023 - Present",
+    jobtitle: "Senior Software Engineer (Freelance) @ Opentools",
+    where: "Remote",
+    date: "07/2023 - Present",
   },
   {
-    jobtitle: "Mern stack developer at Cypherox technology",
+    jobtitle: "Senior Software Engineer (Freelance) @ Crest Coder Private Limited",
+    where: "Remote",
+    date: "06/2023 - Present",
+  },
+  {
+    jobtitle: "Mern stack developer (Full-time) @ Shine infosoft",
+    where: "Ahmedabd, Gujarat, India",
+    date: "10/2023 - 05/2024",
+  },
+  {
+    jobtitle: "Mern stack developer (Full-time) @ Cypherox technology",
     where: "Rajkot, Gujarat, India",
     date: "05/2022 - 07/2023",
   },
-  // {
-  //   jobtitle: "Mern stack developer- trainee at Cypherox technology",
-  //   where: "Rajkot, Gujarat, India",
-  //   date: "05/2022 - 06/2022",
-  // },
   {
-    jobtitle: "Mern stack developer at Besticoder",
+    jobtitle: "Mern stack developer (Full-time) @ Besticoder",
     where: "Remote",
     date: "02/2021-02/2022",
   },
-  // {
-  //   jobtitle: "Mern stack developer- trainee at Besticoder",
-  //   where: "Remote",
-  //   date: "02/2021-04/2021",
-  // },
 ];
 
 const skills = [
@@ -104,11 +104,11 @@ const skills = [
 ];
 
 const services = [
-  // {
-  //   title: "Berry Family Services",
-  //   link: "https://berryfamilyservices.com/",
-  //   description: `Meeting the needs of the disabled and their families with Texas HCS Programs, Disability Services, and Mental Health Services.As a full-stack developer, I have used RectJS with Minimal UI for designing purposes. Also, I have experience working with 8base and Auth0 with React, which gave me insight into how to integrate third-party authentication and backend services. Also, designed a relation base data table Using 8base GUI.I have used GraphQL as a query language. Also, I have used GitLab for version control and collaboration.Used Clickup project management tool.`,
-  // },
+  {
+    title: "Berry Family Services",
+    link: "https://berryfamilyservices.com/",
+    description: `Meeting the needs of the disabled and their families with Texas HCS Programs, Disability Services, and Mental Health Services.As a full-stack developer, I have used RectJS with Minimal UI for designing purposes. Also, I have experience working with 8base and Auth0 with React, which gave me insight into how to integrate third-party authentication and backend services. Also, designed a relation base data table Using 8base GUI.I have used GraphQL as a query language. Also, I have used GitLab for version control and collaboration.Used Clickup project management tool.`,
+  },
   {
     title: "Professional Hair Labs",
     link: "https://www.prohairlabs.com/",
@@ -155,15 +155,15 @@ const services = [
     link: "https://www.adamsea.com/",
     description: `It's an e-commerce platform tailored for boat enthusiasts, where I played a pivotal role as a front-end developer. Our website offers a seamless browsing and purchasing experience for a diverse range of boats. Which is built with ReactJS with Typescript, Redux.`,
   },
-  // {
-  //   title: "E-Resume",
-  //   description: `Create Your Online Resume with E-Resume. I created an E-Resume, simplifying resume building with user registration, secure authentication, and the ability to craft, edit, and download multiple resumes.
-  //   The application, developed using ReactJs, ExpressJs, and MySQL, offers a seamless experience with demo templates and PDF downloads for user convenience.`,
-  // },
-  // {
-  //   title: "Chat App",
-  //   description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
-  // },
+  {
+    title: "E-Resume",
+    description: `Create Your Online Resume with E-Resume. I created an E-Resume, simplifying resume building with user registration, secure authentication, and the ability to craft, edit, and download multiple resumes.
+    The application, developed using ReactJs, ExpressJs, and MySQL, offers a seamless experience with demo templates and PDF downloads for user convenience.`,
+  },
+  {
+    title: "Chat App",
+    description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
+  },
 ];
 
 const dataportfolio = [
@@ -244,7 +244,7 @@ const dataportfolio = [
 
 const contactConfig = {
   YOUR_EMAIL: "dodiyah330@gmail.com",
-  YOUR_FONE: "9725797443",
+  YOUR_FONE: "+91 9725797443",
   description: "Get in touch with me today. We'd love to hear from you!",
   // creat an emailjs.com account
   // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
