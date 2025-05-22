@@ -192,6 +192,12 @@ section {
     justify-content: center;
 }
 
+@media (max-width:1024px) and (min-width:991.98px) {
+    .align-self-center {
+        margin: 50px;
+    }   
+}
+
 @media (max-width:991.98px) {
     .intro_sec .h_bg-image {
         height: 600px;

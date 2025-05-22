@@ -38,7 +38,7 @@ export const Home = () => {
                   />
                 </h1>
                 <p className="mb-1x">{introdata.description}</p>
-                <div className="intro_btn-action pb-5">
+                <div className="intro_btn-action pb-3">
                   <Link to="/about" className="text_2">
                     <div id="button_p" className="ac_btn btn ">
                       About Me
@@ -56,6 +56,14 @@ export const Home = () => {
                     </div>
                   </Link>
                 </div>
+                <Link to="https://widgets.sociablekit.com/linkedin-recommendations/iframe/25559556" target="_blank">
+                  <div id="button_h" className="ac_btn btn">
+                    Recommendations
+                    <div className="ring one"></div>
+                    <div className="ring two"></div>
+                    <div className="ring three"></div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
