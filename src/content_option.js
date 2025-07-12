@@ -105,6 +105,26 @@ const skills = [
 
 const services = [
   {
+    title: "OpenTools",
+    link: "https://opentools.ai/",
+    description: `OpenTools.ai is a fast-growing AI tools directory helping users discover and compare 900+ AI tools across categories like writing, coding, design, and automation. Built with MERN stack, it supports real-time search, admin panel, and tool submission workflows. Currently receiving 30,000+ monthly visitors, the platform aims to expand features like user reviews, API integrations, and personalized recommendations. Developed AI integration with Next.JS and mongoDB`,
+  },
+  {
+    title: "Coshot",
+    link: "https://coshot.ai/",
+    description: `COSHOT is an innovative photo-sharing and sales platform connecting photographers and users through AI-driven photo matching and personalized galleries. It integrates facial recognition to help users find photos they appear in, enables photographers to monetize event photography, and manages complex subscription plans for storage and advanced AI features.`,
+  },
+  {
+    title: "POBO",
+    link: "https://po-bo.com/",
+    description: `POBO is a smart platform for managing bookings, sales, and customer relationships. It features an automated booking engine, integrated POS and e-commerce, a CRM for personalized engagement, and tools for managing sales agents. Ideal for wineries and retail businesses, POBO helps streamline operations and boost efficiency—all from one powerful dashboard.`,
+  },
+  {
+    title: "Thiba-Ingozi",
+    link: "https://thibaingozi.com/",
+    description: `Thiba-Ingozi comes from popular Southern African languages, where “Thiba” in Sotho/Tswana means “Prevent/Block,” and “Ingozi” in Zulu/Xhosa means “Danger/Hazard/Risk.”Thiba-Ingozi is a safety app initially designed to supplement the safety of eHailing drivers and passengers, offering instant alerts and real-time location sharing to nearby users, ensuring quick help and enhanced protection on the road. It can be used by anyone, whether at home or on the road, ensuring safety wherever you are. There’s no need to wait long for assistance.`,
+  },
+  {
     title: "Berry Family Services",
     link: "https://berryfamilyservices.com/",
     description: `Meeting the needs of the disabled and their families with Texas HCS Programs, Disability Services, and Mental Health Services.As a full-stack developer, I have used RectJS with Minimal UI for designing purposes. Also, I have experience working with 8base and Auth0 with React, which gave me insight into how to integrate third-party authentication and backend services. Also, designed a relation base data table Using 8base GUI.I have used GraphQL as a query language. Also, I have used GitLab for version control and collaboration.Used Clickup project management tool.`,
