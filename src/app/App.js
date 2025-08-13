@@ -23,6 +23,7 @@ export default function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="cursor__dot">
+{/* here is animated cursorrr */}
         <AnimatedCursor
           innerSize={15}
           outerSize={15}
