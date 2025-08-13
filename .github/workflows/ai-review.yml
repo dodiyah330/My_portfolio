@@ -6,6 +6,12 @@ on:
   issues:
     types: [opened]
 
+# Set the permissions for the GITHUB_TOKEN
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
 jobs:
   ai_review:
     if: github.event_name == 'pull_request'
@@ -31,11 +37,27 @@ jobs:
             node .ai-bot/review.js $file >> review_output.md
           done
 
-      - name: Comment AI Review
-        uses: peter-evans/create-or-update-comment@v3
+      - name: Create Review Comment
+        uses: actions/github-script@v7
         with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body-file: review_output.md
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+            const pull_number = context.issue.number;
+            
+            // Read the review output
+            const reviewContent = fs.readFileSync('review_output.md', 'utf8');
+            
+            // Only post if there's content
+            if (reviewContent.trim()) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pull_number,
+                body: reviewContent
+              });
+            }
 
   ai_label_issues:
     if: github.event_name == 'issues'
