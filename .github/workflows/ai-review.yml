@@ -1,0 +1,61 @@
+name: AI Code Reviewer
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issues:
+    types: [opened]
+
+jobs:
+  ai_review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install @google/generative-ai
+
+      - name: AI Review PR Files
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          FILES=$(git diff --name-only origin/main)
+          for file in $FILES; do
+            node .ai-bot/review.js $file >> review_output.md
+          done
+
+      - name: Comment AI Review
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-file: review_output.md
+
+  ai_label_issues:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: npm install @google/generative-ai
+
+      - name: AI Label Issue
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          ISSUE_BODY="${{ github.event.issue.body }}"
+          RESPONSE=$(node -e "
+            import { GoogleGenerativeAI } from '@google/generative-ai';
+            const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+            const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+            (async () => {
+              const result = await model.generateContent(\`Suggest 3 relevant GitHub labels for this issue: ${ISSUE_BODY}\`);
+              console.log(result.response.text());
+            })();
+          ")
+          echo "Labels: $RESPONSE"
