@@ -26,10 +26,30 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          FILES=$(git diff --name-only origin/main)
-          for file in $FILES; do
-            node .ai-bot/review.js $file >> review_output.md
-          done
+          # Fetch the base branch to compare against
+          git fetch origin ${{ github.base_ref }} --depth=1
+          
+          # Get changed files between base and head
+          FILES=$(git diff --name-only ${{ github.base_ref }}...${{ github.sha }} --diff-filter=ACMRTUXB || true)
+          
+          # Create or clear the review output file
+          echo "# AI Code Review\n" > review_output.md
+          
+          # Process each changed file
+          if [ -n "$FILES" ]; then
+            echo "## Changed Files" >> review_output.md
+            for file in $FILES; do
+              # Skip files larger than 1MB
+              if [ $(wc -c <"$file") -lt 1000000 ]; then
+                echo "\n### Reviewing $file" >> review_output.md
+                node .ai-bot/review.js "$file" >> review_output.md 2>&1 || echo "Error processing $file" >> review_output.md
+              else
+                echo "\n### Skipped $file (file too large)" >> review_output.md
+              fi
+            done
+          else
+            echo "No files to review." >> review_output.md
+          fi
 
       - name: Comment AI Review
         uses: peter-evans/create-or-update-comment@v3
