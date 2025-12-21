@@ -1,4 +1,4 @@
-import hiteshImg from "./assets/images/hitesh.jpeg";
+import hiteshImg from "./assets/images/hitesh.png";
 const logotext = "HITESH";
 const meta = {
   title: "Hitesh Dodiya",
