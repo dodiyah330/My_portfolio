@@ -110,9 +110,9 @@ const services = [
     description: `OpenTools.ai is a fast-growing AI tools directory helping users discover and compare 900+ AI tools across categories like writing, coding, design, and automation. Built with MERN stack, it supports real-time search, admin panel, and tool submission workflows. Currently receiving 30,000+ monthly visitors, the platform aims to expand features like user reviews, API integrations, and personalized recommendations. Developed AI integration with Next.JS and mongoDB`,
   },
   {
-    title: "Coshot",
-    link: "https://coshot.ai/",
-    description: `COSHOT is an innovative photo-sharing and sales platform connecting photographers and users through AI-driven photo matching and personalized galleries. It integrates facial recognition to help users find photos they appear in, enables photographers to monetize event photography, and manages complex subscription plans for storage and advanced AI features.`,
+    title: "Cosnap",
+    link: "https://cosnap.ai/",
+    description: `COSNAP is an innovative photo-sharing and sales platform connecting photographers and users through AI-driven photo matching and personalized galleries. It integrates facial recognition to help users find photos they appear in, enables photographers to monetize event photography, and manages complex subscription plans for storage and advanced AI features.`,
   },
   {
     title: "POBO",
