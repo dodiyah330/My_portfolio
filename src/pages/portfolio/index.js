@@ -7,7 +7,7 @@ import { dataportfolio, meta } from "../../content_option";
 export const Portfolio = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header page-glow">
         <Helmet>
           <meta charSet="utf-8" />
           <title> Portfolio | {meta.title} </title>{" "}

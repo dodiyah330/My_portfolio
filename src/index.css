@@ -94,3 +94,35 @@ code {
 .color_sec {
     color: var(--secondary-color) !important;
 }
+
+.page-glow {
+    position: relative;
+    isolation: isolate;
+}
+
+.page-glow::before,
+.page-glow::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: .22;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.page-glow::before {
+    width: 180px;
+    height: 180px;
+    background: #6a5cff;
+    top: 40px;
+    left: -60px;
+}
+
+.page-glow::after {
+    width: 220px;
+    height: 220px;
+    background: #27c1ff;
+    bottom: 30px;
+    right: -80px;
+}

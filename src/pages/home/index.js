@@ -4,7 +4,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta, serviceHighlights, trustStats, homeServices } from "../../content_option";
 import { Link } from "react-router-dom";
-import projectPreview from "../../assets/images/react-porfolio.png";
 import brandMark from "../../assets/images/logo.svg";
 
 const personSchema = {
@@ -20,7 +19,7 @@ const personSchema = {
 export const Home = () => {
   return (
     <HelmetProvider>
-      <section id="home" className="home modern-home">
+      <section id="home" className="home modern-home page-glow">
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title}</title>
@@ -84,7 +83,6 @@ export const Home = () => {
           </div>
 
           <div className="hero-image-wrap">
-            <img src={projectPreview} alt="Recent product interface designed and developed by Hitesh Dodiya" className="hero-side-preview" />
             <div
               className="h_bg-image"
               style={{ backgroundImage: `url(${introdata.your_img_url})` }}

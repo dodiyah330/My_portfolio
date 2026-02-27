@@ -94,15 +94,15 @@ section {
     background: linear-gradient(140deg, color-mix(in srgb, var(--text-color) 12%, transparent), transparent);
     border: 1px solid color-mix(in srgb, var(--text-color) 16%, transparent);
     backdrop-filter: blur(8px);
-    display: grid;
-    gap: 1rem;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transition: transform .35s ease;
 }
 
-.hero-side-preview {
-    width: 100%;
-    border-radius: 16px;
-    border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+.hero-image-wrap:hover {
+    transform: perspective(1000px) rotateY(-1deg) rotateX(0deg) translateY(-3px);
 }
+
 
 .h_bg-image {
     background-size: cover;
@@ -152,6 +152,13 @@ section {
     flex-direction: column;
     gap: .25rem;
     background: color-mix(in srgb, var(--bg-color) 84%, var(--text-color) 16%);
+    transform: translateZ(0);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px) rotateX(4deg);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .18);
 }
 
 .stat-card strong {
@@ -200,6 +207,13 @@ section {
     border-radius: 16px;
     padding: 1.1rem;
     background: linear-gradient(120deg, color-mix(in srgb, var(--bg-color) 88%, var(--text-color) 12%), transparent);
+    transform-style: preserve-3d;
+    transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.service-card:hover {
+    transform: perspective(900px) translateY(-6px) rotateX(5deg);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, .16);
 }
 
 .service-card h4 {
