@@ -1,9 +1,12 @@
 import hiteshImg from "./assets/images/hitesh.png";
 const logotext = "HITESH";
 const meta = {
-  title: "Hitesh Dodiya",
+  title: "Hitesh Dodiya | Full-Stack Developer",
   description:
-    "I’m Hitesh Dodiya full-stack devloper,currently working as a freelancer",
+    "Hitesh Dodiya is a full-stack developer with 7+ years of experience delivering SaaS, AI-powered platforms, dashboards, and e-commerce products for global clients.",
+  keywords:
+    "Full-stack developer, MERN developer, React developer, Next.js developer, Node.js developer, SaaS development, AI integration, dashboard development, e-commerce development, freelance developer",
+  siteUrl: "https://hitesh-dodiya.netlify.app/",
 };
 
 const introdata = {
@@ -29,6 +32,29 @@ const trustStats = [
   { label: "Years in development", value: "7+" },
   { label: "Production projects", value: "20+" },
   { label: "Core stack", value: "MERN + Next.js" },
+];
+
+const homeServices = [
+  {
+    title: "SaaS & Dashboard Development",
+    description:
+      "Build scalable dashboards, admin panels, and SaaS products with clean architecture and production-grade UX.",
+  },
+  {
+    title: "AI Integrations",
+    description:
+      "Integrate AI workflows, automations, and smart features into existing or new web products.",
+  },
+  {
+    title: "E-commerce Solutions",
+    description:
+      "Create conversion-focused storefronts and backend systems for modern e-commerce businesses.",
+  },
+  {
+    title: "Performance & Code Quality",
+    description:
+      "Improve loading speed, maintainability, and scalability through optimization and engineering best practices.",
+  },
 ];
 
 const dataabout = {
@@ -348,6 +374,7 @@ export {
   introdata,
   serviceHighlights,
   trustStats,
+  homeServices,
   contactConfig,
   socialprofils,
   logotext,

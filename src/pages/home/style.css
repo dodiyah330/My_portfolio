@@ -25,7 +25,7 @@ section {
     position: absolute;
     border-radius: 50%;
     filter: blur(12px);
-    opacity: .45;
+    opacity: .4;
     z-index: -1;
 }
 
@@ -45,12 +45,12 @@ section {
     right: 25%;
 }
 
-.hero-content h2 {
+.hero-content h1 {
     font-size: clamp(1.8rem, 2.5vw, 2.5rem);
     margin: .5rem 0;
 }
 
-.hero-content h1 {
+.hero-content h2 {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     opacity: .85;
     min-height: 2.5rem;
@@ -89,45 +89,27 @@ section {
 }
 
 .hero-image-wrap {
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 24px;
     background: linear-gradient(140deg, color-mix(in srgb, var(--text-color) 12%, transparent), transparent);
     border: 1px solid color-mix(in srgb, var(--text-color) 16%, transparent);
     backdrop-filter: blur(8px);
-    position: relative;
-    overflow: hidden;
+    display: grid;
+    gap: 1rem;
 }
 
-.preview-badge {
-    position: absolute;
-    top: 1.85rem;
-    right: 1.85rem;
-    width: 170px;
-    border-radius: 14px;
-    padding: .5rem;
-    background: color-mix(in srgb, var(--bg-color) 72%, #ffffff 28%);
-    border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
-    z-index: 2;
-}
-
-.preview-badge img {
+.hero-side-preview {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: .45rem;
-}
-
-.preview-badge p {
-    margin: 0;
-    font-size: .72rem;
-    opacity: .85;
+    border-radius: 16px;
+    border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
 }
 
 .h_bg-image {
     background-size: cover;
     background-position: center top;
-    min-height: 580px;
+    min-height: 470px;
     border-radius: 18px;
-    filter: saturate(0.9) contrast(1.02);
+    filter: saturate(0.95) contrast(1.02);
 }
 
 .intro_btn-action {
@@ -181,6 +163,56 @@ section {
     font-size: .85rem;
 }
 
+.services-home {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.services-home__head {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    margin-bottom: 1rem;
+}
+
+.services-home__head img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.services-home__head h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.service-card {
+    border: 1px solid color-mix(in srgb, var(--text-color) 16%, transparent);
+    border-radius: 16px;
+    padding: 1.1rem;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--bg-color) 88%, var(--text-color) 12%), transparent);
+}
+
+.service-card h4 {
+    font-size: 1rem;
+    margin-bottom: .55rem;
+}
+
+.service-card p {
+    margin: 0;
+    opacity: .85;
+    line-height: 1.6;
+}
+
 @media (max-width: 992px) {
     .hero-shell {
         grid-template-columns: 1fr;
@@ -190,13 +222,8 @@ section {
         min-height: 420px;
     }
 
-    .stats-grid {
+    .stats-grid,
+    .services-grid {
         grid-template-columns: 1fr;
-    }
-
-    .preview-badge {
-        width: 140px;
-        top: 1.5rem;
-        right: 1.5rem;
     }
 }
