@@ -67,6 +67,29 @@
 }
 
 
+.projects-note {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+    opacity: .9;
+}
+
+.projects-note__logo {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--text-color) 24%, transparent);
+    background: color-mix(in srgb, var(--bg-color) 78%, var(--text-color) 22%);
+}
+
+.projects-note p {
+    margin: 0;
+    font-size: .9rem;
+}
+
 .project-sector {
     margin-bottom: 2.25rem;
 }

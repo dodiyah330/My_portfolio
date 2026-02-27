@@ -11,6 +11,7 @@ import {
 } from "../../content_option";
 import { Link } from "react-router-dom/dist";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import brandMark from "../../assets/images/logo.svg";
 
 const serviceSectors = [
   {
@@ -132,6 +133,10 @@ export const About = () => {
         <Row className="sec_sp">
           <Col lang="5">
             <h3 className="color_sec py-4">Projects</h3>
+            <div className="projects-note">
+              <img src={brandMark} alt="Brand mark" className="projects-note__logo" />
+              <p>Sector-wise showcase for development and design work.</p>
+            </div>
           </Col>
           <Col lg="7">
             {groupedServices.map((sector) => (

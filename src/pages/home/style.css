@@ -17,6 +17,32 @@ section {
     grid-template-columns: 1.1fr .9fr;
     gap: 2rem;
     align-items: center;
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(12px);
+    opacity: .45;
+    z-index: -1;
+}
+
+.orb-one {
+    width: 180px;
+    height: 180px;
+    background: #6a5cff;
+    top: -30px;
+    left: -20px;
+}
+
+.orb-two {
+    width: 220px;
+    height: 220px;
+    background: #27c1ff;
+    bottom: -50px;
+    right: 25%;
 }
 
 .hero-content h2 {
@@ -38,6 +64,7 @@ section {
     font-size: .85rem;
     letter-spacing: .03em;
     margin-bottom: 1rem;
+    backdrop-filter: blur(4px);
 }
 
 .hero-description {
@@ -58,6 +85,7 @@ section {
     padding: .4rem .75rem;
     border-radius: 999px;
     font-size: .85rem;
+    background: color-mix(in srgb, var(--bg-color) 82%, var(--text-color) 18%);
 }
 
 .hero-image-wrap {
@@ -66,6 +94,32 @@ section {
     background: linear-gradient(140deg, color-mix(in srgb, var(--text-color) 12%, transparent), transparent);
     border: 1px solid color-mix(in srgb, var(--text-color) 16%, transparent);
     backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-badge {
+    position: absolute;
+    top: 1.85rem;
+    right: 1.85rem;
+    width: 170px;
+    border-radius: 14px;
+    padding: .5rem;
+    background: color-mix(in srgb, var(--bg-color) 72%, #ffffff 28%);
+    border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+    z-index: 2;
+}
+
+.preview-badge img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: .45rem;
+}
+
+.preview-badge p {
+    margin: 0;
+    font-size: .72rem;
+    opacity: .85;
 }
 
 .h_bg-image {
@@ -115,6 +169,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    background: color-mix(in srgb, var(--bg-color) 84%, var(--text-color) 16%);
 }
 
 .stat-card strong {
@@ -137,5 +192,11 @@ section {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .preview-badge {
+        width: 140px;
+        top: 1.5rem;
+        right: 1.5rem;
     }
 }

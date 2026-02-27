@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta, serviceHighlights, trustStats } from "../../content_option";
 import { Link } from "react-router-dom";
+import projectPreview from "../../assets/images/react-porfolio.png";
 
 export const Home = () => {
   return (
@@ -16,6 +17,8 @@ export const Home = () => {
         </Helmet>
 
         <div className="hero-shell">
+          <span className="hero-orb orb-one"></span>
+          <span className="hero-orb orb-two"></span>
           <div className="hero-content">
             <p className="hero-tag">Available for freelance & long-term roles</p>
             <h2>{introdata.title}</h2>
@@ -63,6 +66,10 @@ export const Home = () => {
           </div>
 
           <div className="hero-image-wrap">
+            <div className="preview-badge">
+              <img src={projectPreview} alt="Project preview" />
+              <p>Latest Product UI Preview</p>
+            </div>
             <div
               className="h_bg-image"
               style={{ backgroundImage: `url(${introdata.your_img_url})` }}
