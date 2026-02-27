@@ -7,16 +7,29 @@ const meta = {
 };
 
 const introdata = {
-  title: "I’m Hitesh Dodiya",
+  title: "Full-Stack Engineer for Product-Focused Teams",
   animated: {
-    first: "Craft captivating experiences",
-    second: "Problem-solving powerhouse",
-    third: "Passionate collaborator",
+    first: "Modern web apps with premium UX",
+    second: "Scalable MERN & Next.js architecture",
+    third: "Reliable delivery for startups and agencies",
   },
   description:
-    "As a full-stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+    "I help companies launch and improve SaaS products, AI tools, dashboards, and e-commerce experiences. My approach combines clean UI, strong performance, and maintainable full-stack code so your product looks professional and grows without rework.",
   your_img_url: hiteshImg,
 };
+
+const serviceHighlights = [
+  "SaaS & dashboard development",
+  "AI integrations and workflow automation",
+  "E-commerce storefronts & admin panels",
+  "Performance optimization & code quality",
+];
+
+const trustStats = [
+  { label: "Years in development", value: "4+" },
+  { label: "Production projects", value: "20+" },
+  { label: "Core stack", value: "MERN + Next.js" },
+];
 
 const dataabout = {
   title: "About My Self",
@@ -287,6 +300,8 @@ export {
   skills,
   services,
   introdata,
+  serviceHighlights,
+  trustStats,
   contactConfig,
   socialprofils,
   logotext,
