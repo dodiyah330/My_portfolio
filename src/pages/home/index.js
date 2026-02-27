@@ -50,14 +50,6 @@ export const Home = () => {
               <Link to="/contact" className="ac_btn btn" id="button_h">
                 Contact Me
               </Link>
-              <Link
-                to="https://widgets.sociablekit.com/linkedin-recommendations/iframe/25559556"
-                target="_blank"
-                className="ac_btn btn"
-                id="button_h"
-              >
-                Recommendations
-              </Link>
             </div>
 
             <div className="stats-grid">

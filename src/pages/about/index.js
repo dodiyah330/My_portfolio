@@ -83,10 +83,10 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">Selected Projects</h3>
+            <h3 className="color_sec py-4">Projects</h3>
           </Col>
           <Col lg="7">
-            {services.slice(0, 6).map((data, i) => {
+            {services.map((data, i) => {
               return (
                 <div className="service_ py-4" key={i}>
                   <h5 className="service__title">

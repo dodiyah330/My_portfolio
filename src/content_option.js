@@ -26,7 +26,7 @@ const serviceHighlights = [
 ];
 
 const trustStats = [
-  { label: "Years in development", value: "4+" },
+  { label: "Years in development", value: "7+" },
   { label: "Production projects", value: "20+" },
   { label: "Core stack", value: "MERN + Next.js" },
 ];
@@ -197,6 +197,52 @@ const services = [
     title: "Chat App",
     description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
   },
+  {
+    title: "Graphic Design Portfolio - PHAMON",
+    link: "https://www.figma.com/design/LMdtPgV8MMsE6fLZG5ebIF/PHAMON",
+    description: `UI/UX and brand-aligned visual design exploration created in Figma for the PHAMON concept. Focused on modern layout systems, visual hierarchy, and polished component styling.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Globber",
+    link: "https://www.figma.com/design/6d4oHUouLlh2ERPId6O7bI/Globber?node-id=0-1&p=f",
+    description: `Creative product design concept in Figma with strong typography, spacing rhythm, and conversion-focused user journeys.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Baxter",
+    link: "https://www.figma.com/design/WnlDxLbrDKdxq7tcqNrixd/Baxter?node-id=74-13394",
+    description: `Interface design work for Baxter featuring scalable design patterns, responsive components, and clean visual consistency.`,
+  },
+  {
+    title: "Graphic Design Portfolio - STEMA Admin Backend MVP",
+    link: "https://www.figma.com/design/yOcD2Gy0bHfsUPD3C8blc1/STEMA-Admin-Backend-MVP?node-id=0-1&t=dbAiY1H1frFMsm08-1",
+    description: `Admin panel design system and workflow screens crafted in Figma with emphasis on usability and information density.`,
+  },
+  {
+    title: "Graphic Design Portfolio - History in Motion Studios",
+    link: "https://www.figma.com/design/Cy2HDacCWUkT3gZsCBoNVT/History-in-Motion-Studios?node-id=0-1&t=MyzdJQLXX5D3gj6G-1",
+    description: `Visual identity and digital experience concept with a storytelling-focused structure and high-end presentation style.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Wasabi",
+    link: "https://www.figma.com/design/qGAhqTQ2CnJxwMkFXyOWa8/Wasabi?node-id=0-1&t=05DzdOagsNUjWIQF-0",
+    description: `Product-focused UI concept with vibrant branding, intuitive interactions, and modern dashboard aesthetics.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Comerica",
+    link: "https://www.figma.com/design/BVY8N3h2gUNzYjK3xqzmJX/Comerica?node-id=0-1&t=DfsgcPOwNp1V6Px9-0",
+    description: `Figma-based interface exploration balancing enterprise clarity with contemporary, professional visual language.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Orderbazaar",
+    link: "https://www.figma.com/design/QxyvTJ2c8s1QhurTnFpIku/Orderbazaar?node-id=0-1",
+    description: `Marketplace experience design with reusable components, clean UI patterns, and user-friendly navigation flow.`,
+  },
+  {
+    title: "Graphic Design Portfolio - RJ Distributing USA",
+    link: "https://www.figma.com/design/DZEGm8TXydGAMHwNTO9TSs/rjdistributingusa?node-id=0-1",
+    description: `Professional design presentation showcasing layout precision, content readability, and practical business UX decisions.`,
+  },
+
 ];
 
 const dataportfolio = [
