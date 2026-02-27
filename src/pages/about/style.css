@@ -66,6 +66,19 @@
     font-size: 45px;
 }
 
+
+.project-sector {
+    margin-bottom: 2.25rem;
+}
+
+.project-sector__title {
+    margin-bottom: .9rem;
+    font-size: 1.1rem;
+    letter-spacing: .02em;
+    border-left: 3px solid #48d6ff;
+    padding-left: .75rem;
+}
+
 .service__title {
     display: flex;
     justify-content: space-between;
