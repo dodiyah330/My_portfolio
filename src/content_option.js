@@ -1,22 +1,61 @@
 import hiteshImg from "./assets/images/hitesh.png";
 const logotext = "HITESH";
 const meta = {
-  title: "Hitesh Dodiya",
+  title: "Hitesh Dodiya | Full-Stack Developer",
   description:
-    "I’m Hitesh Dodiya full-stack devloper,currently working as a freelancer",
+    "Hitesh Dodiya is a full-stack developer with 7+ years of experience delivering SaaS, AI-powered platforms, dashboards, and e-commerce products for global clients.",
+  keywords:
+    "Full-stack developer, MERN developer, React developer, Next.js developer, Node.js developer, SaaS development, AI integration, dashboard development, e-commerce development, freelance developer",
+  siteUrl: "https://hitesh-dodiya.netlify.app/",
 };
 
 const introdata = {
-  title: "I’m Hitesh Dodiya",
+  title: "Full-Stack Engineer for Product-Focused Teams",
   animated: {
-    first: "Craft captivating experiences",
-    second: "Problem-solving powerhouse",
-    third: "Passionate collaborator",
+    first: "Modern web apps with premium UX",
+    second: "Scalable MERN & Next.js architecture",
+    third: "Reliable delivery for startups and agencies",
   },
   description:
-    "As a full-stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+    "I help companies launch and improve SaaS products, AI tools, dashboards, and e-commerce experiences. My approach combines clean UI, strong performance, and maintainable full-stack code so your product looks professional and grows without rework.",
   your_img_url: hiteshImg,
 };
+
+const serviceHighlights = [
+  "SaaS & dashboard development",
+  "AI integrations and workflow automation",
+  "E-commerce storefronts & admin panels",
+  "Performance optimization & code quality",
+];
+
+const trustStats = [
+  { label: "Years in development", value: "7+" },
+  { label: "Production projects", value: "20+" },
+  { label: "Core stack", value: "MERN + Next.js" },
+];
+
+const homeServices = [
+  {
+    title: "SaaS & Dashboard Development",
+    description:
+      "Build scalable dashboards, admin panels, and SaaS products with clean architecture and production-grade UX.",
+  },
+  {
+    title: "AI Integrations",
+    description:
+      "Integrate AI workflows, automations, and smart features into existing or new web products.",
+  },
+  {
+    title: "E-commerce Solutions",
+    description:
+      "Create conversion-focused storefronts and backend systems for modern e-commerce businesses.",
+  },
+  {
+    title: "Performance & Code Quality",
+    description:
+      "Improve loading speed, maintainability, and scalability through optimization and engineering best practices.",
+  },
+];
 
 const dataabout = {
   title: "About My Self",
@@ -184,6 +223,52 @@ const services = [
     title: "Chat App",
     description: `I developed a real-time chat app using Socket.io and React.js, enabling instant communication. The application facilitates dynamic and interactive conversations, showcasing my proficiency in web development and socket-based technologies.`,
   },
+  {
+    title: "Graphic Design Portfolio - PHAMON",
+    link: "https://www.figma.com/design/LMdtPgV8MMsE6fLZG5ebIF/PHAMON",
+    description: `UI/UX and brand-aligned visual design exploration created in Figma for the PHAMON concept. Focused on modern layout systems, visual hierarchy, and polished component styling.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Globber",
+    link: "https://www.figma.com/design/6d4oHUouLlh2ERPId6O7bI/Globber?node-id=0-1&p=f",
+    description: `Creative product design concept in Figma with strong typography, spacing rhythm, and conversion-focused user journeys.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Baxter",
+    link: "https://www.figma.com/design/WnlDxLbrDKdxq7tcqNrixd/Baxter?node-id=74-13394",
+    description: `Interface design work for Baxter featuring scalable design patterns, responsive components, and clean visual consistency.`,
+  },
+  {
+    title: "Graphic Design Portfolio - STEMA Admin Backend MVP",
+    link: "https://www.figma.com/design/yOcD2Gy0bHfsUPD3C8blc1/STEMA-Admin-Backend-MVP?node-id=0-1&t=dbAiY1H1frFMsm08-1",
+    description: `Admin panel design system and workflow screens crafted in Figma with emphasis on usability and information density.`,
+  },
+  {
+    title: "Graphic Design Portfolio - History in Motion Studios",
+    link: "https://www.figma.com/design/Cy2HDacCWUkT3gZsCBoNVT/History-in-Motion-Studios?node-id=0-1&t=MyzdJQLXX5D3gj6G-1",
+    description: `Visual identity and digital experience concept with a storytelling-focused structure and high-end presentation style.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Wasabi",
+    link: "https://www.figma.com/design/qGAhqTQ2CnJxwMkFXyOWa8/Wasabi?node-id=0-1&t=05DzdOagsNUjWIQF-0",
+    description: `Product-focused UI concept with vibrant branding, intuitive interactions, and modern dashboard aesthetics.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Comerica",
+    link: "https://www.figma.com/design/BVY8N3h2gUNzYjK3xqzmJX/Comerica?node-id=0-1&t=DfsgcPOwNp1V6Px9-0",
+    description: `Figma-based interface exploration balancing enterprise clarity with contemporary, professional visual language.`,
+  },
+  {
+    title: "Graphic Design Portfolio - Orderbazaar",
+    link: "https://www.figma.com/design/QxyvTJ2c8s1QhurTnFpIku/Orderbazaar?node-id=0-1",
+    description: `Marketplace experience design with reusable components, clean UI patterns, and user-friendly navigation flow.`,
+  },
+  {
+    title: "Graphic Design Portfolio - RJ Distributing USA",
+    link: "https://www.figma.com/design/DZEGm8TXydGAMHwNTO9TSs/rjdistributingusa?node-id=0-1",
+    description: `Professional design presentation showcasing layout precision, content readability, and practical business UX decisions.`,
+  },
+
 ];
 
 const dataportfolio = [
@@ -287,6 +372,9 @@ export {
   skills,
   services,
   introdata,
+  serviceHighlights,
+  trustStats,
+  homeServices,
   contactConfig,
   socialprofils,
   logotext,

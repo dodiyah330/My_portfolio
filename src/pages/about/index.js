@@ -11,11 +11,60 @@ import {
 } from "../../content_option";
 import { Link } from "react-router-dom/dist";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import brandMark from "../../assets/images/logo.svg";
+
+const serviceSectors = [
+  {
+    name: "AI, SaaS & Platforms",
+    matcher: (project) =>
+      ["OpenTools", "Cosnap", "POBO", "Thiba-Ingozi", "Revidit", "Web Assessment"].includes(project.title),
+  },
+  {
+    name: "E-commerce & Marketplace",
+    matcher: (project) =>
+      ["Professional Hair Labs", "Adam Sea", "Berry Family Services"].includes(project.title),
+  },
+  {
+    name: "Admin Panels, Business Tools & Productivity",
+    matcher: (project) =>
+      [
+        "Eagle Property Management",
+        "Client Details Organiser",
+        "National Service Providers",
+        "E-Resume",
+      ].includes(project.title),
+  },
+  {
+    name: "Communication & Engagement",
+    matcher: (project) => ["Chat Omni", "Chat App"].includes(project.title),
+  },
+  {
+    name: "Graphic Design Portfolio",
+    matcher: (project) => project.title.includes("Graphic Design Portfolio"),
+  },
+];
+
+const groupedServices = serviceSectors
+  .map((sector) => ({
+    ...sector,
+    items: services.filter(sector.matcher),
+  }))
+  .filter((sector) => sector.items.length > 0);
+
+const groupedTitles = new Set(groupedServices.flatMap((sector) => sector.items.map((item) => item.title)));
+const uncategorizedProjects = services.filter((item) => !groupedTitles.has(item.title));
+
+if (uncategorizedProjects.length) {
+  groupedServices.push({
+    name: "Other Projects",
+    items: uncategorizedProjects,
+  });
+}
 
 export const About = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header page-glow">
         <Helmet>
           <meta charSet="utf-8" />
           <title> About | {meta.title}</title>
@@ -84,21 +133,30 @@ export const About = () => {
         <Row className="sec_sp">
           <Col lang="5">
             <h3 className="color_sec py-4">Projects</h3>
+            <div className="projects-note">
+              <img src={brandMark} alt="Brand mark" className="projects-note__logo" />
+              <p>Sector-wise showcase for development and design work.</p>
+            </div>
           </Col>
           <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">
-                    {data.title}
-                    <Link to={data.link} target={data.link && "_blank"}>
-                      <FaExternalLinkAlt />
-                    </Link>
-                  </h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
+            {groupedServices.map((sector) => (
+              <div className="project-sector" key={sector.name}>
+                <h4 className="project-sector__title">{sector.name}</h4>
+                {sector.items.map((data, i) => (
+                  <div className="service_ py-4" key={`${sector.name}-${data.title}-${i}`}>
+                    <h5 className="service__title">
+                      {data.title}
+                      {data.link && (
+                        <Link to={data.link} target="_blank">
+                          <FaExternalLinkAlt />
+                        </Link>
+                      )}
+                    </h5>
+                    <p className="service_desc">{data.description}</p>
+                  </div>
+                ))}
+              </div>
+            ))}
           </Col>
         </Row>
       </Container>
