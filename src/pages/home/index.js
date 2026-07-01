@@ -13,7 +13,7 @@ const personSchema = {
   jobTitle: "Full-Stack Developer",
   url: meta.siteUrl,
   sameAs: ["https://github.com/dodiyah330", "https://www.linkedin.com/in/hitesh-dodiya-4061171b2/"],
-  knowsAbout: ["React", "Node.js", "Next.js", "MongoDB", "Full-Stack Development", "AI Integrations"],
+  knowsAbout: ["React", "Node.js", "Next.js", "MongoDB", "Full-Stack Development", "AI Automation", "AI Integrations"],
 };
 
 export const Home = () => {
@@ -97,12 +97,24 @@ export const Home = () => {
             <h3 id="services-heading">Services</h3>
           </div>
           <div className="services-grid">
-            {homeServices.map((service) => (
-              <article className="service-card" key={service.title}>
-                <h4>{service.title}</h4>
-                <p>{service.description}</p>
-              </article>
-            ))}
+            {homeServices.map((service) => {
+              const cardContent = (
+                <>
+                  <h4>{service.title}</h4>
+                  <p>{service.description}</p>
+                </>
+              );
+
+              return service.link ? (
+                <Link to={service.link} className="service-card service-card--linked" key={service.title}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <article className="service-card" key={service.title}>
+                  {cardContent}
+                </article>
+              );
+            })}
           </div>
         </section>
       </section>
