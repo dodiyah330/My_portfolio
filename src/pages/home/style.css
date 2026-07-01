@@ -209,6 +209,9 @@ section {
     background: linear-gradient(120deg, color-mix(in srgb, var(--bg-color) 88%, var(--text-color) 12%), transparent);
     transform-style: preserve-3d;
     transition: transform .28s ease, box-shadow .28s ease;
+    display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 .service-card:hover {

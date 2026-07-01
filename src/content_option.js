@@ -5,7 +5,7 @@ const meta = {
   description:
     "Hitesh Dodiya is a full-stack developer with 7+ years of experience delivering SaaS, AI-powered platforms, dashboards, and e-commerce products for global clients.",
   keywords:
-    "Full-stack developer, MERN developer, React developer, Next.js developer, Node.js developer, SaaS development, AI integration, dashboard development, e-commerce development, freelance developer",
+    "Full-stack developer, MERN developer, React developer, Next.js developer, Node.js developer, SaaS development, AI integration, AI automation, workflow automation, dashboard development, e-commerce development, freelance developer",
   siteUrl: "https://hitesh-dodiya.netlify.app/",
 };
 
@@ -23,7 +23,7 @@ const introdata = {
 
 const serviceHighlights = [
   "SaaS & dashboard development",
-  "AI integrations and workflow automation",
+  "AI automation & workflow orchestration",
   "E-commerce storefronts & admin panels",
   "Performance optimization & code quality",
 ];
@@ -41,9 +41,15 @@ const homeServices = [
       "Build scalable dashboards, admin panels, and SaaS products with clean architecture and production-grade UX.",
   },
   {
+    title: "AI Automation",
+    description:
+      "Design and deploy AI-powered workflows with Zapier, n8n, Slack, WhatsApp, and RAG pipelines that save hours every week.",
+    link: "/services/ai-automation",
+  },
+  {
     title: "AI Integrations",
     description:
-      "Integrate AI workflows, automations, and smart features into existing or new web products.",
+      "Integrate LLMs, APIs, and smart features into existing or new web products with clean, production-ready code.",
   },
   {
     title: "E-commerce Solutions",
@@ -347,6 +353,56 @@ const dataportfolio = [
   },
 ];
 
+const aiAutomationService = {
+  title: "AI Automation",
+  subtitle: "Workflow orchestration that connects your tools, data, and AI models",
+  description:
+    "I build reliable automation systems that remove repetitive work, route information to the right channels, and layer AI where it adds real value. From no-code orchestration with Zapier and n8n to custom RAG pipelines with Pinecone, each workflow is designed for clarity, observability, and easy maintenance.",
+  capabilities: [
+    {
+      title: "Cross-platform workflow automation",
+      description:
+        "Connect CRMs, spreadsheets, email, Slack, and internal tools so data moves automatically between systems without manual copy-paste.",
+    },
+    {
+      title: "AI-powered messaging & support",
+      description:
+        "Build WhatsApp and Slack bots that answer questions using your knowledge base, route escalations, and keep teams in the loop.",
+    },
+    {
+      title: "RAG & knowledge retrieval",
+      description:
+        "Set up retrieval-augmented generation with vector stores like Pinecone so automations respond with accurate, context-aware answers.",
+    },
+    {
+      title: "Monitoring & handoff design",
+      description:
+        "Structure workflows with logging, failure alerts, and human-in-the-loop steps so automations stay trustworthy in production.",
+    },
+  ],
+  tools: ["Zapier", "n8n", "Slack", "WhatsApp", "OpenAI", "Pinecone", "Node.js", "Webhooks"],
+  demos: [
+    {
+      title: "Zapier + Slack automation",
+      description:
+        "Automated Slack notifications and task routing triggered by form submissions, CRM updates, or scheduled events.",
+      link: "https://drive.google.com/file/d/1DDeJpIZnkhTuu0untQ0nxryWnTpevY0B/view?usp=sharing",
+    },
+    {
+      title: "n8n WhatsApp RAG with Pinecone",
+      description:
+        "WhatsApp assistant powered by n8n, vector search, and Pinecone to deliver context-aware replies from your own documents.",
+      link: "https://drive.google.com/file/d/1vhjUVEyCvE2w5x8OCKEPz0dZuzFrks-W/view?usp=sharing",
+    },
+  ],
+  deliverables: [
+    "Workflow architecture and tool selection",
+    "End-to-end automation setup and testing",
+    "AI/RAG pipeline configuration where needed",
+    "Documentation and handoff for your team",
+  ],
+};
+
 const contactConfig = {
   YOUR_EMAIL: "dodiyah330@gmail.com",
   YOUR_FONE: "+91 9725797443",
@@ -375,6 +431,7 @@ export {
   serviceHighlights,
   trustStats,
   homeServices,
+  aiAutomationService,
   contactConfig,
   socialprofils,
   logotext,
