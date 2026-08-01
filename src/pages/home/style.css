@@ -519,13 +519,19 @@ section {
 
 @media (max-width: 640px) {
     .linkedin-home__identity {
+        flex-direction: column;
         align-items: flex-start;
+        gap: .9rem;
     }
 
     .linkedin-home__avatar {
-        width: 64px;
-        height: 64px;
-        border-radius: 14px;
+        width: 72px;
+        height: 72px;
+        border-radius: 16px;
+    }
+
+    .linkedin-home__copy p:last-child {
+        max-width: none;
     }
 
     .intro_btn-action .ac_btn {
@@ -534,6 +540,19 @@ section {
 
     .ac_btn--linkedin {
         flex: 1 1 100%;
+    }
+
+    .modern-home {
+        padding-bottom: 7.5rem;
+    }
+
+    .linkedin-home {
+        margin-bottom: .5rem;
+    }
+
+    .linkedin-home__cta {
+        position: relative;
+        z-index: 1;
     }
 }
 
