@@ -223,15 +223,21 @@ export const Home = () => {
                 </div>
               </div>
 
-              <a
-                className="linkedin-home__cta"
-                href={LINKEDIN_PROFILE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Connect on LinkedIn
-                <FaArrowRight aria-hidden="true" />
-              </a>
+              <div className="linkedin-home__cta-row">
+                <Link className="linkedin-home__cta linkedin-home__cta--secondary" to="/blog">
+                  Read LinkedIn blog
+                  <FaArrowRight aria-hidden="true" />
+                </Link>
+                <a
+                  className="linkedin-home__cta"
+                  href={LINKEDIN_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Connect on LinkedIn
+                  <FaArrowRight aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
         </section>

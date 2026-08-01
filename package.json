@@ -20,6 +20,8 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "sync:linkedin": "node scripts/sync-linkedin-posts.js",
+        "prebuild": "node scripts/sync-linkedin-posts.js",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
