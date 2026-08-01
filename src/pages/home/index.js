@@ -143,63 +143,6 @@ export const Home = () => {
           </div>
         </div>
 
-        <section className="linkedin-home" aria-labelledby="linkedin-heading">
-          <div className="linkedin-home__panel">
-            <div className="linkedin-home__identity">
-              <div
-                className="linkedin-home__avatar"
-                style={{ backgroundImage: `url(${introdata.your_img_url})` }}
-                role="img"
-                aria-label="Hitesh Dodiya"
-              ></div>
-              <div className="linkedin-home__copy">
-                <p className="linkedin-home__eyebrow">
-                  <FaLinkedinIn aria-hidden="true" />
-                  Professional network
-                </p>
-                <h3 id="linkedin-heading">Let's connect on LinkedIn</h3>
-                <p>
-                  See recent work, recommendations, and open roles. Happy to chat about
-                  product builds, AI automation, and freelance collaborations.
-                </p>
-              </div>
-            </div>
-
-            <div className="linkedin-home__actions">
-              <div className="linkedin-home__badge" key={badgeTheme}>
-                <div
-                  className="badge-base LI-profile-badge"
-                  data-locale="en_US"
-                  data-size="large"
-                  data-theme={badgeTheme}
-                  data-type="HORIZONTAL"
-                  data-vanity="hitesh-dodiya1"
-                  data-version="v1"
-                >
-                  <a
-                    className="badge-base__link LI-simple-link"
-                    href={LINKEDIN_PROFILE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Hitesh Dodiya
-                  </a>
-                </div>
-              </div>
-
-              <a
-                className="linkedin-home__cta"
-                href={LINKEDIN_PROFILE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View LinkedIn profile
-                <FaArrowRight aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-        </section>
-
         <section className="services-home" aria-labelledby="services-heading">
           <div className="services-home__head">
             <img src={brandMark} alt="" />
@@ -233,6 +176,63 @@ export const Home = () => {
                 </article>
               );
             })}
+          </div>
+        </section>
+
+        <section className="linkedin-home linkedin-home--cta" aria-labelledby="linkedin-heading">
+          <div className="linkedin-home__panel">
+            <div className="linkedin-home__identity">
+              <div
+                className="linkedin-home__avatar"
+                style={{ backgroundImage: `url(${introdata.your_img_url})` }}
+                role="img"
+                aria-label="Hitesh Dodiya"
+              ></div>
+              <div className="linkedin-home__copy">
+                <p className="linkedin-home__eyebrow">
+                  <FaLinkedinIn aria-hidden="true" />
+                  Next step
+                </p>
+                <h3 id="linkedin-heading">Ready to work together?</h3>
+                <p>
+                  Connect on LinkedIn to see recent work, recommendations, and open roles —
+                  or message me about your next product build.
+                </p>
+              </div>
+            </div>
+
+            <div className="linkedin-home__actions">
+              <div className="linkedin-home__badge" key={badgeTheme}>
+                <div
+                  className="badge-base LI-profile-badge"
+                  data-locale="en_US"
+                  data-size="large"
+                  data-theme={badgeTheme}
+                  data-type="HORIZONTAL"
+                  data-vanity="hitesh-dodiya1"
+                  data-version="v1"
+                >
+                  <a
+                    className="badge-base__link LI-simple-link"
+                    href={LINKEDIN_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Hitesh Dodiya
+                  </a>
+                </div>
+              </div>
+
+              <a
+                className="linkedin-home__cta"
+                href={LINKEDIN_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Connect on LinkedIn
+                <FaArrowRight aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </section>
       </section>
