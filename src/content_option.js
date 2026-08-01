@@ -417,7 +417,7 @@ const contactConfig = {
 const socialprofils = {
   github: "https://github.com/dodiyah330",
   facebook: "https://www.facebook.com/profile.php?id=100064943934105",
-  linkedin: "https://www.linkedin.com/in/hitesh-dodiya-4061171b2/",
+  linkedin: "https://www.linkedin.com/in/hitesh-dodiya1/",
   // twitter: "https://twitter.com",
 };
 export {

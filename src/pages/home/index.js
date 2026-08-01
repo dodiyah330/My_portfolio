@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta, serviceHighlights, trustStats, homeServices } from "../../content_option";
+import { introdata, meta, serviceHighlights, trustStats, homeServices, socialprofils } from "../../content_option";
 import { Link } from "react-router-dom";
 import brandMark from "../../assets/images/logo.svg";
+
+const LINKEDIN_BADGE_SCRIPT = "https://platform.linkedin.com/badges/js/profile.js";
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -12,11 +14,29 @@ const personSchema = {
   name: "Hitesh Dodiya",
   jobTitle: "Full-Stack Developer",
   url: meta.siteUrl,
-  sameAs: ["https://github.com/dodiyah330", "https://www.linkedin.com/in/hitesh-dodiya-4061171b2/"],
+  sameAs: ["https://github.com/dodiyah330", socialprofils.linkedin],
   knowsAbout: ["React", "Node.js", "Next.js", "MongoDB", "Full-Stack Development", "AI Automation", "AI Integrations"],
 };
 
 export const Home = () => {
+  useEffect(() => {
+    const existingScript = document.querySelector(`script[src="${LINKEDIN_BADGE_SCRIPT}"]`);
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement("script");
+    script.src = LINKEDIN_BADGE_SCRIPT;
+    script.async = true;
+    script.defer = true;
+    script.type = "text/javascript";
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   return (
     <HelmetProvider>
       <section id="home" className="home modern-home page-glow">
@@ -90,6 +110,31 @@ export const Home = () => {
             ></div>
           </div>
         </div>
+
+        <section className="linkedin-home" aria-labelledby="linkedin-heading">
+          <div className="linkedin-home__copy">
+            <h3 id="linkedin-heading">Connect on LinkedIn</h3>
+            <p>Follow my work and get in touch on LinkedIn.</p>
+          </div>
+          <div className="linkedin-home__badge">
+            <div
+              className="badge-base LI-profile-badge"
+              data-locale="en_US"
+              data-size="large"
+              data-theme="dark"
+              data-type="HORIZONTAL"
+              data-vanity="hitesh-dodiya1"
+              data-version="v1"
+            >
+              <a
+                className="badge-base__link LI-simple-link"
+                href="https://in.linkedin.com/in/hitesh-dodiya1?trk=profile-badge"
+              >
+                Hitesh Dodiya
+              </a>
+            </div>
+          </div>
+        </section>
 
         <section className="services-home" aria-labelledby="services-heading">
           <div className="services-home__head">

@@ -170,6 +170,40 @@ section {
     font-size: .85rem;
 }
 
+.linkedin-home {
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.linkedin-home__copy h3 {
+    margin: 0 0 .4rem;
+    font-size: 1.5rem;
+}
+
+.linkedin-home__copy p {
+    margin: 0;
+    opacity: .85;
+    max-width: 42ch;
+    line-height: 1.6;
+}
+
+.linkedin-home__badge {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.linkedin-home__badge .LI-profile-badge,
+.linkedin-home__badge .badge-base {
+    display: inline-block;
+}
+
 .services-home {
     max-width: 1200px;
     margin: 1.5rem auto 0;
