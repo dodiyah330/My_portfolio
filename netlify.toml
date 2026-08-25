@@ -6,6 +6,18 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions.linkedin-posts]
+  included_files = ["src/content/linkedin_posts.json", "scripts/linkedin-posts-lib.js"]
+
+[[redirects]]
+  from = "/api/linkedin-posts"
+  to = "/.netlify/functions/linkedin-posts"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

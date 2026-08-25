@@ -6,6 +6,8 @@ import { Portfolio } from "../pages/portfolio";
 import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
 import { AiAutomation } from "../pages/services/ai-automation";
+import { Blog } from "../pages/blog";
+import { BlogPost } from "../pages/blog/post";
 import { AiAutomationBlogIndex } from "../pages/blog/ai-automation";
 import { AiAutomationBlogPost } from "../pages/blog/ai-automation/post";
 import { Socialicons } from "../components/socialicons";
@@ -25,9 +27,12 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Routes location={location}>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services/ai-automation" element={<AiAutomation />} />
+        {/* Specific Notion workflow blog routes must come before /blog/:slug */}
         <Route path="/blog/ai-automation" element={<AiAutomationBlogIndex />} />
         <Route path="/blog/ai-automation/:slug" element={<AiAutomationBlogPost />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/services/ai-automation" element={<AiAutomation />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<Home />} />
