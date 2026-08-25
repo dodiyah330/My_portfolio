@@ -9,16 +9,9 @@ import {
   aiAutomationBlogs,
   getAiAutomationBlogBySlug,
 } from "../../../data/aiAutomationBlogs";
+import { getAiAutomationBlogBody } from "../../../data/aiAutomationBlogBodies";
 import { meta } from "../../../content_option";
-
-const formatDate = (value) => {
-  if (!value) return null;
-  return new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
+import { NotionBody } from "../../../components/NotionBody";
 
 export const AiAutomationBlogPost = () => {
   const { slug } = useParams();
@@ -28,6 +21,7 @@ export const AiAutomationBlogPost = () => {
     return <Navigate to="/blog/ai-automation" replace />;
   }
 
+  const body = getAiAutomationBlogBody(post.id);
   const canonical = `${meta.siteUrl}blog/ai-automation/${post.slug}`;
   const pageTitle = `${post.title} | ${meta.title}`;
   const related = aiAutomationBlogs
@@ -84,7 +78,6 @@ export const AiAutomationBlogPost = () => {
             </nav>
             <div className="ai-blog-card__meta ai-blog-post__meta">
               <span>{post.category}</span>
-              {formatDate(post.date) ? <span>{formatDate(post.date)}</span> : null}
             </div>
             <h1 className="display-5 mb-3">{post.title}</h1>
             <p className="ai-blog__intro">{post.description}</p>
@@ -105,15 +98,9 @@ export const AiAutomationBlogPost = () => {
           </Col>
         </Row>
 
-        <div className="ai-blog-embed">
-          <iframe
-            title={post.title}
-            src={post.embedUrl}
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
+        <article className="ai-blog-article">
+          <NotionBody blocks={body} />
+        </article>
 
         {related.length > 0 ? (
           <section className="ai-blog-related" aria-labelledby="related-heading">

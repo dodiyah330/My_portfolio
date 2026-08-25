@@ -189,20 +189,23 @@
 
 .the_submenu {
     list-style: none;
-    padding: .35rem 0 .75rem .35rem;
+    padding: .55rem 0 1rem 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: .45rem;
+    gap: .35rem;
 }
 
 .the_submenu a {
     color: var(--text-color-2);
     text-decoration: none;
-    font-size: 1rem;
-    opacity: .8;
-    font-family: Raleway, sans-serif;
-    letter-spacing: .02em;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    opacity: .92;
+    font-family: Marcellus, serif;
+    letter-spacing: .01em;
+    padding: .2rem 0;
+    display: inline-block;
 }
 
 .the_submenu a:hover {
@@ -211,8 +214,13 @@
 }
 
 @media (min-width: 768px) {
+    .the_submenu {
+        padding-left: .15rem;
+        gap: .45rem;
+    }
+
     .the_submenu a {
-        font-size: 1.15rem;
+        font-size: clamp(1.25rem, 2.2vw, 1.7rem);
     }
 }
 

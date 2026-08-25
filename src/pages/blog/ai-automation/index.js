@@ -11,15 +11,6 @@ import {
 import { meta } from "../../../content_option";
 import brandMark from "../../../assets/images/logo.svg";
 
-const formatDate = (value) => {
-  if (!value) return "Workflow guide";
-  return new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-};
-
 export const AiAutomationBlogIndex = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -120,7 +111,6 @@ export const AiAutomationBlogIndex = () => {
             <article className="ai-blog-card" key={post.id}>
               <div className="ai-blog-card__meta">
                 <span>{post.category}</span>
-                <span>{formatDate(post.date)}</span>
               </div>
               <h2>
                 <Link to={`/blog/ai-automation/${post.slug}`}>{post.title}</Link>
