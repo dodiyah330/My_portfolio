@@ -46,8 +46,16 @@ const Headermain = () => {
                   {/* <li className="menu_item">
                     <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
                   </li> */}
-                  <li className="menu_item">
+                  <li className="menu_item menu_item--group">
                     <Link onClick={handleToggle} to="/services/ai-automation" className="my-3">AI Automation</Link>
+                    <ul className="the_submenu">
+                      <li>
+                        <Link onClick={handleToggle} to="/services/ai-automation">Service overview</Link>
+                      </li>
+                      <li>
+                        <Link onClick={handleToggle} to="/blog/ai-automation">Workflow blogs</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li className="menu_item">
                     <Link onClick={handleToggle} to="/blog" className="my-3">Blog</Link>

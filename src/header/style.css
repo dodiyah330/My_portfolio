@@ -187,6 +187,43 @@
     color: var(--text-color-3);
 }
 
+.the_submenu {
+    list-style: none;
+    padding: .55rem 0 1rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.the_submenu a {
+    color: var(--text-color-2);
+    text-decoration: none;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    opacity: .92;
+    font-family: Marcellus, serif;
+    letter-spacing: .01em;
+    padding: .2rem 0;
+    display: inline-block;
+}
+
+.the_submenu a:hover {
+    opacity: 1;
+    color: var(--text-color-3);
+}
+
+@media (min-width: 768px) {
+    .the_submenu {
+        padding-left: .15rem;
+        gap: .45rem;
+    }
+
+    .the_submenu a {
+        font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+    }
+}
+
 @media (min-width: 768px) {
     .the_menu .menu_item>a {
         font-size: 4.8vw;

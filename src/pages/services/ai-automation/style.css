@@ -73,6 +73,50 @@
     line-height: 1.6;
 }
 
+.service-inline-link {
+    display: inline-block;
+    margin-top: .75rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+}
+
+.blog-preview-grid {
+    display: grid;
+    gap: .85rem;
+}
+
+.blog-preview-card {
+    border: 1px solid color-mix(in srgb, var(--text-color) 16%, transparent);
+    border-radius: 14px;
+    padding: .95rem 1rem;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--bg-color) 88%, var(--text-color) 12%), transparent);
+}
+
+.blog-preview-card__tag {
+    display: inline-block;
+    font-size: .75rem;
+    opacity: .75;
+    margin-bottom: .45rem;
+}
+
+.blog-preview-card h4 {
+    font-size: .98rem;
+    margin-bottom: .4rem;
+    line-height: 1.4;
+}
+
+.blog-preview-card h4 a {
+    text-decoration: none;
+}
+
+.blog-preview-card p {
+    margin: 0;
+    opacity: .82;
+    line-height: 1.55;
+    font-size: .92rem;
+}
+
 .demo-card {
     display: grid;
     grid-template-columns: auto 1fr;

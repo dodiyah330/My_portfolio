@@ -5,11 +5,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaExternalLinkAlt, FaPlayCircle } from "react-icons/fa";
 import { aiAutomationService, meta } from "../../../content_option";
+import { aiAutomationBlogs } from "../../../data/aiAutomationBlogs";
 import brandMark from "../../../assets/images/logo.svg";
 
 export const AiAutomation = () => {
   const pageTitle = `${aiAutomationService.title} | ${meta.title}`;
   const pageDescription = aiAutomationService.description;
+  const featuredBlogs = aiAutomationBlogs.slice(0, 6);
 
   return (
     <HelmetProvider>
@@ -115,6 +117,31 @@ export const AiAutomation = () => {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </Col>
+        </Row>
+
+        <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Automation Blogs</h3>
+            <p className="demo-note">
+              SEO-friendly workflow articles sourced from the Notion AI Automation Workflows library. Open any post for the full Notion embed.
+            </p>
+            <Link to="/blog/ai-automation" className="service-inline-link">
+              Browse all {aiAutomationBlogs.length} blogs
+            </Link>
+          </Col>
+          <Col lg="7">
+            <div className="blog-preview-grid">
+              {featuredBlogs.map((post) => (
+                <article className="blog-preview-card" key={post.id}>
+                  <span className="blog-preview-card__tag">{post.category}</span>
+                  <h4>
+                    <Link to={`/blog/ai-automation/${post.slug}`}>{post.title}</Link>
+                  </h4>
+                  <p>{post.description}</p>
+                </article>
+              ))}
+            </div>
           </Col>
         </Row>
 
