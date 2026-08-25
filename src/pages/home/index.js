@@ -202,7 +202,31 @@ export const Home = () => {
             </div>
 
             <div className="linkedin-home__actions">
-              <div className="linkedin-home__badge" key={badgeTheme}>
+              <a
+                className="linkedin-home__cta linkedin-home__cta--primary"
+                href={LINKEDIN_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with Hitesh Dodiya on LinkedIn"
+              >
+                <span className="linkedin-home__cta-icon" aria-hidden="true">
+                  <FaLinkedinIn />
+                </span>
+                <span className="linkedin-home__cta-copy">
+                  <strong>Connect on LinkedIn</strong>
+                  <small>Open profile &amp; send a message</small>
+                </span>
+                <FaArrowRight className="linkedin-home__cta-arrow" aria-hidden="true" />
+              </a>
+
+              <div className="linkedin-home__cta-row">
+                <Link className="linkedin-home__cta linkedin-home__cta--secondary" to="/blog">
+                  Read LinkedIn blog
+                  <FaArrowRight aria-hidden="true" />
+                </Link>
+              </div>
+
+              <div className="linkedin-home__badge" key={badgeTheme} aria-hidden="true">
                 <div
                   className="badge-base LI-profile-badge"
                   data-locale="en_US"
@@ -217,26 +241,11 @@ export const Home = () => {
                     href={LINKEDIN_PROFILE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    tabIndex={-1}
                   >
                     Hitesh Dodiya
                   </a>
                 </div>
-              </div>
-
-              <div className="linkedin-home__cta-row">
-                <Link className="linkedin-home__cta linkedin-home__cta--secondary" to="/blog">
-                  Read LinkedIn blog
-                  <FaArrowRight aria-hidden="true" />
-                </Link>
-                <a
-                  className="linkedin-home__cta"
-                  href={LINKEDIN_PROFILE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Connect on LinkedIn
-                  <FaArrowRight aria-hidden="true" />
-                </a>
               </div>
             </div>
           </div>
