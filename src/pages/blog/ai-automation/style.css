@@ -194,8 +194,10 @@
 
 .notion-body__figure img {
     max-width: 100%;
+    height: auto;
     border-radius: 12px;
     border: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+    background: color-mix(in srgb, var(--bg-color) 88%, var(--text-color) 12%);
 }
 
 .notion-body--empty {
