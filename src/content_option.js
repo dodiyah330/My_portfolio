@@ -418,6 +418,7 @@ const socialprofils = {
   github: "https://github.com/dodiyah330",
   facebook: "https://www.facebook.com/profile.php?id=100064943934105",
   linkedin: "https://www.linkedin.com/in/hitesh-dodiya1/",
+  youtube: "https://www.youtube.com/@hiteshdodiyaa",
   // twitter: "https://twitter.com",
 };
 export {
