@@ -11,6 +11,15 @@ import youtubeFeed from "../../content/youtube_videos.json";
 const LINKEDIN_BADGE_SCRIPT = "https://platform.linkedin.com/badges/js/profile.js";
 const LINKEDIN_PROFILE_URL = "https://in.linkedin.com/in/hitesh-dodiya1?trk=profile-badge";
 const YOUTUBE_CHANNEL_URL = socialprofils.youtube || youtubeFeed.channelUrl;
+const HERO_INTRO_VIDEO_ID = "kdWB9X5dQDQ";
+const heroIntroVideo =
+  (youtubeFeed.videos || []).find((video) => video.id === HERO_INTRO_VIDEO_ID) || {
+    id: HERO_INTRO_VIDEO_ID,
+    title: "Introduction - Hitesh Dodiya",
+    url: `https://www.youtube.com/watch?v=${HERO_INTRO_VIDEO_ID}`,
+    embedUrl: `https://www.youtube.com/embed/${HERO_INTRO_VIDEO_ID}`,
+    thumbnail: `https://i.ytimg.com/vi/${HERO_INTRO_VIDEO_ID}/hqdefault.jpg`,
+  };
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -47,6 +56,7 @@ export const Home = () => {
     typeof document !== "undefined" ? getDocumentTheme() : "dark"
   );
   const [activeVideoId, setActiveVideoId] = useState(null);
+  const [heroVideoPlaying, setHeroVideoPlaying] = useState(false);
   const youtubeVideos = youtubeFeed.videos || [];
 
   useEffect(() => {
@@ -163,13 +173,34 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="hero-image-wrap">
-            <div
-              className="h_bg-image"
-              style={{ backgroundImage: `url(${introdata.your_img_url})` }}
-              role="img"
-              aria-label="Portrait of Hitesh Dodiya"
-            ></div>
+          <div className="hero-image-wrap hero-video-wrap">
+            <div className="hero-video">
+              {heroVideoPlaying ? (
+                <iframe
+                  title={heroIntroVideo.title}
+                  src={`${heroIntroVideo.embedUrl}?autoplay=1&rel=0`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  type="button"
+                  className="hero-video__preview"
+                  onClick={() => setHeroVideoPlaying(true)}
+                  aria-label={`Play ${heroIntroVideo.title}`}
+                >
+                  <img
+                    src={heroIntroVideo.thumbnail}
+                    alt=""
+                    loading="eager"
+                  />
+                  <span className="hero-video__play" aria-hidden="true">
+                    <FaPlay />
+                  </span>
+                  <span className="hero-video__label">Watch introduction</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

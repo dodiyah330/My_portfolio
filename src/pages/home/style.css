@@ -164,6 +164,103 @@ section {
     filter: saturate(0.95) contrast(1.02);
 }
 
+.hero-video-wrap {
+    align-self: center;
+}
+
+.hero-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0b0b0b;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--text-color) 10%, transparent);
+}
+
+.hero-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.hero-video__preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: #000;
+    overflow: hidden;
+}
+
+.hero-video__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease, filter .35s ease;
+}
+
+.hero-video__preview:hover img,
+.hero-video__preview:focus-visible img {
+    transform: scale(1.04);
+    filter: brightness(.72);
+}
+
+.hero-video__preview:focus-visible {
+    outline: 2px solid #ff8a80;
+    outline-offset: -2px;
+}
+
+.hero-video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #c4302b;
+    color: #fff;
+    font-size: 1.35rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .4);
+    transition: transform .22s ease, background-color .22s ease;
+}
+
+.hero-video__play svg {
+    margin-left: 4px;
+}
+
+.hero-video__label {
+    position: absolute;
+    left: 50%;
+    bottom: 1.1rem;
+    transform: translateX(-50%);
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .62);
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, .18);
+}
+
+.hero-video__preview:hover .hero-video__play,
+.hero-video__preview:focus-visible .hero-video__play {
+    transform: translate(-50%, -58%) scale(1.08);
+    background: #9e2420;
+}
+
 .intro_btn-action {
     display: flex;
     flex-wrap: wrap;
@@ -839,6 +936,12 @@ section {
         min-height: 380px;
     }
 
+    .hero-video__play {
+        width: 64px;
+        height: 64px;
+        font-size: 1.2rem;
+    }
+
     .linkedin-home__panel {
         grid-template-columns: 1fr;
         padding: 1.25rem;
@@ -934,6 +1037,8 @@ section {
     .hero-orb,
     .hero-tag::before,
     .hero-image-wrap,
+    .hero-video__preview img,
+    .hero-video__play,
     .ac_btn,
     .stat-card,
     .service-card,
