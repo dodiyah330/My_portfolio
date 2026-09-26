@@ -2,13 +2,24 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { FaLinkedinIn, FaArrowRight } from "react-icons/fa";
+import { FaLinkedinIn, FaArrowRight, FaYoutube, FaPlay } from "react-icons/fa";
 import { introdata, meta, serviceHighlights, trustStats, homeServices, socialprofils } from "../../content_option";
 import { Link } from "react-router-dom";
 import brandMark from "../../assets/images/logo.svg";
+import youtubeFeed from "../../content/youtube_videos.json";
 
 const LINKEDIN_BADGE_SCRIPT = "https://platform.linkedin.com/badges/js/profile.js";
 const LINKEDIN_PROFILE_URL = "https://in.linkedin.com/in/hitesh-dodiya1?trk=profile-badge";
+const YOUTUBE_CHANNEL_URL = socialprofils.youtube || youtubeFeed.channelUrl;
+const HERO_INTRO_VIDEO_ID = "kdWB9X5dQDQ";
+const heroIntroVideo =
+  (youtubeFeed.videos || []).find((video) => video.id === HERO_INTRO_VIDEO_ID) || {
+    id: HERO_INTRO_VIDEO_ID,
+    title: "Introduction - Hitesh Dodiya",
+    url: `https://www.youtube.com/watch?v=${HERO_INTRO_VIDEO_ID}`,
+    embedUrl: `https://www.youtube.com/embed/${HERO_INTRO_VIDEO_ID}`,
+    thumbnail: `https://i.ytimg.com/vi/${HERO_INTRO_VIDEO_ID}/hqdefault.jpg`,
+  };
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -16,17 +27,37 @@ const personSchema = {
   name: "Hitesh Dodiya",
   jobTitle: "Full-Stack Developer",
   url: meta.siteUrl,
-  sameAs: ["https://github.com/dodiyah330", socialprofils.linkedin],
+  sameAs: [
+    "https://github.com/dodiyah330",
+    socialprofils.linkedin,
+    YOUTUBE_CHANNEL_URL,
+  ].filter(Boolean),
   knowsAbout: ["React", "Node.js", "Next.js", "MongoDB", "Full-Stack Development", "AI Automation", "AI Integrations"],
 };
 
 const getDocumentTheme = () =>
   document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
 
+const formatViews = (views) => {
+  if (typeof views !== "number" || Number.isNaN(views)) return null;
+  if (views >= 1000) return `${(views / 1000).toFixed(1).replace(/\.0$/, "")}K views`;
+  return `${views} view${views === 1 ? "" : "s"}`;
+};
+
+const formatVideoDate = (value) => {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+};
+
 export const Home = () => {
   const [badgeTheme, setBadgeTheme] = useState(() =>
     typeof document !== "undefined" ? getDocumentTheme() : "dark"
   );
+  const [activeVideoId, setActiveVideoId] = useState(null);
+  const [heroVideoPlaying, setHeroVideoPlaying] = useState(false);
+  const youtubeVideos = youtubeFeed.videos || [];
 
   useEffect(() => {
     const syncTheme = () => setBadgeTheme(getDocumentTheme());
@@ -121,6 +152,15 @@ export const Home = () => {
                 <FaLinkedinIn aria-hidden="true" />
                 LinkedIn
               </a>
+              <a
+                className="ac_btn btn ac_btn--youtube"
+                href={YOUTUBE_CHANNEL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube aria-hidden="true" />
+                YouTube
+              </a>
             </div>
 
             <div className="stats-grid" aria-label="Experience highlights">
@@ -133,13 +173,34 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="hero-image-wrap">
-            <div
-              className="h_bg-image"
-              style={{ backgroundImage: `url(${introdata.your_img_url})` }}
-              role="img"
-              aria-label="Portrait of Hitesh Dodiya"
-            ></div>
+          <div className="hero-image-wrap hero-video-wrap">
+            <div className="hero-video">
+              {heroVideoPlaying ? (
+                <iframe
+                  title={heroIntroVideo.title}
+                  src={`${heroIntroVideo.embedUrl}?autoplay=1&rel=0`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  type="button"
+                  className="hero-video__preview"
+                  onClick={() => setHeroVideoPlaying(true)}
+                  aria-label={`Play ${heroIntroVideo.title}`}
+                >
+                  <img
+                    src={heroIntroVideo.thumbnail}
+                    alt=""
+                    loading="eager"
+                  />
+                  <span className="hero-video__play" aria-hidden="true">
+                    <FaPlay />
+                  </span>
+                  <span className="hero-video__label">Watch introduction</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
@@ -178,6 +239,89 @@ export const Home = () => {
             })}
           </div>
         </section>
+
+        {youtubeVideos.length > 0 ? (
+          <section className="youtube-home" aria-labelledby="youtube-heading">
+            <div className="youtube-home__head">
+              <div className="youtube-home__title-block">
+                <p className="youtube-home__eyebrow">
+                  <FaYoutube aria-hidden="true" />
+                  YouTube
+                </p>
+                <h3 id="youtube-heading">Watch tutorials &amp; walkthroughs</h3>
+                <p>
+                  Latest videos from my channel — WordPress plugins, product walkthroughs,
+                  and development tips.
+                </p>
+              </div>
+              <a
+                className="youtube-home__channel-cta"
+                href={YOUTUBE_CHANNEL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube aria-hidden="true" />
+                Visit channel
+                <FaArrowRight aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="youtube-home__grid">
+              {youtubeVideos.map((video) => {
+                const isPlaying = activeVideoId === video.id;
+                const viewsLabel = formatViews(video.views);
+                const dateLabel = formatVideoDate(video.publishedAt);
+
+                return (
+                  <article className="youtube-card" key={video.id}>
+                    <div className="youtube-card__media">
+                      {isPlaying ? (
+                        <iframe
+                          title={video.title}
+                          src={`${video.embedUrl}?autoplay=1&rel=0`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          loading="lazy"
+                        />
+                      ) : (
+                        <button
+                          type="button"
+                          className="youtube-card__preview"
+                          onClick={() => setActiveVideoId(video.id)}
+                          aria-label={`Play ${video.title}`}
+                        >
+                          <img
+                            src={video.thumbnail}
+                            alt=""
+                            loading="lazy"
+                          />
+                          <span className="youtube-card__play" aria-hidden="true">
+                            <FaPlay />
+                          </span>
+                        </button>
+                      )}
+                    </div>
+                    <div className="youtube-card__body">
+                      <h4>
+                        <a href={video.url} target="_blank" rel="noopener noreferrer">
+                          {video.title}
+                        </a>
+                      </h4>
+                      {(viewsLabel || dateLabel) && (
+                        <p className="youtube-card__meta">
+                          {[viewsLabel, dateLabel].filter(Boolean).join(" · ")}
+                        </p>
+                      )}
+                      {video.description ? (
+                        <p className="youtube-card__desc">{video.description}</p>
+                      ) : null}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
 
         <section className="linkedin-home linkedin-home--cta" aria-labelledby="linkedin-heading">
           <div className="linkedin-home__panel">
@@ -224,6 +368,15 @@ export const Home = () => {
                   Read LinkedIn blog
                   <FaArrowRight aria-hidden="true" />
                 </Link>
+                <a
+                  className="linkedin-home__cta linkedin-home__cta--secondary"
+                  href={YOUTUBE_CHANNEL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch on YouTube
+                  <FaArrowRight aria-hidden="true" />
+                </a>
               </div>
 
               <div className="linkedin-home__badge" key={badgeTheme} aria-hidden="true">
