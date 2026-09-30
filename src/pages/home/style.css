@@ -926,6 +926,129 @@ section {
     overflow: hidden;
 }
 
+.youtube-shorts {
+    max-width: 1200px;
+    margin: 3.25rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.youtube-shorts__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+}
+
+.youtube-short-card {
+    border: 1px solid color-mix(in srgb, #c4302b 22%, var(--text-color) 12%);
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(
+        160deg,
+        color-mix(in srgb, var(--bg-color) 88%, #c4302b 12%),
+        color-mix(in srgb, var(--bg-color) 96%, transparent)
+    );
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.youtube-short-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, #c4302b 45%, var(--text-color) 18%);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, .16);
+}
+
+.youtube-short-card__media {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    background: #111;
+}
+
+.youtube-short-card__media iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.youtube-short-card__preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: #000;
+    overflow: hidden;
+}
+
+.youtube-short-card__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease, filter .35s ease;
+}
+
+.youtube-short-card__preview:hover img,
+.youtube-short-card__preview:focus-visible img {
+    transform: scale(1.04);
+    filter: brightness(.72);
+}
+
+.youtube-short-card__preview:focus-visible {
+    outline: 2px solid #ff8a80;
+    outline-offset: -2px;
+}
+
+.youtube-short-card__badge {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    z-index: 1;
+    padding: .28rem .55rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .72);
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.youtube-short-card__preview .youtube-card__play {
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+}
+
+.youtube-short-card__body {
+    padding: .95rem 1rem 1.1rem;
+}
+
+.youtube-short-card__body h4 {
+    margin: 0 0 .35rem;
+    font-size: .95rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.youtube-short-card__body h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.youtube-short-card__body h4 a:hover {
+    color: color-mix(in srgb, #ff6b61 55%, var(--text-color));
+}
+
 @media (max-width: 992px) {
     .hero-shell {
         grid-template-columns: 1fr;
@@ -976,6 +1099,10 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .youtube-shorts__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .youtube-home__head {
         flex-direction: column;
         align-items: flex-start;
@@ -988,6 +1115,12 @@ section {
 }
 
 @media (max-width: 640px) {
+    .youtube-shorts__grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
     .linkedin-home__identity {
         flex-direction: column;
         align-items: flex-start;
@@ -1045,6 +1178,8 @@ section {
     .youtube-card,
     .youtube-card__preview img,
     .youtube-card__play,
+    .youtube-short-card,
+    .youtube-short-card__preview img,
     .youtube-home__channel-cta,
     .linkedin-home__cta,
     .linkedin-home__cta--primary,
