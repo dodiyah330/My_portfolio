@@ -7,10 +7,12 @@ import { introdata, meta, serviceHighlights, trustStats, homeServices, socialpro
 import { Link } from "react-router-dom";
 import brandMark from "../../assets/images/logo.svg";
 import youtubeFeed from "../../content/youtube_videos.json";
+import youtubeShortsFeed from "../../content/youtube_shorts.json";
 
 const LINKEDIN_BADGE_SCRIPT = "https://platform.linkedin.com/badges/js/profile.js";
 const LINKEDIN_PROFILE_URL = "https://in.linkedin.com/in/hitesh-dodiya1?trk=profile-badge";
 const YOUTUBE_CHANNEL_URL = socialprofils.youtube || youtubeFeed.channelUrl;
+const YOUTUBE_SHORTS_URL = youtubeShortsFeed.shortsUrl || `${YOUTUBE_CHANNEL_URL}/shorts`;
 const HERO_INTRO_VIDEO_ID = "kdWB9X5dQDQ";
 const heroIntroVideo =
   (youtubeFeed.videos || []).find((video) => video.id === HERO_INTRO_VIDEO_ID) || {
@@ -56,8 +58,11 @@ export const Home = () => {
     typeof document !== "undefined" ? getDocumentTheme() : "dark"
   );
   const [activeVideoId, setActiveVideoId] = useState(null);
+  const [activeShortId, setActiveShortId] = useState(null);
   const [heroVideoPlaying, setHeroVideoPlaying] = useState(false);
-  const youtubeVideos = youtubeFeed.videos || [];
+  const youtubeShorts = youtubeShortsFeed.shorts || [];
+  const shortIds = new Set(youtubeShorts.map((short) => short.id));
+  const youtubeVideos = (youtubeFeed.videos || []).filter((video) => !shortIds.has(video.id));
 
   useEffect(() => {
     const syncTheme = () => setBadgeTheme(getDocumentTheme());
@@ -314,6 +319,81 @@ export const Home = () => {
                       )}
                       {video.description ? (
                         <p className="youtube-card__desc">{video.description}</p>
+                      ) : null}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
+
+        {youtubeShorts.length > 0 ? (
+          <section className="youtube-shorts" aria-labelledby="youtube-shorts-heading">
+            <div className="youtube-home__head">
+              <div className="youtube-home__title-block">
+                <p className="youtube-home__eyebrow">
+                  <FaYoutube aria-hidden="true" />
+                  YouTube Shorts
+                </p>
+                <h3 id="youtube-shorts-heading">Quick AI automation clips</h3>
+                <p>
+                  Short-form tips on AI workflows, lead gen, and customer support automation.
+                </p>
+              </div>
+              <a
+                className="youtube-home__channel-cta"
+                href={YOUTUBE_SHORTS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube aria-hidden="true" />
+                View all Shorts
+                <FaArrowRight aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="youtube-shorts__grid">
+              {youtubeShorts.map((short) => {
+                const isPlaying = activeShortId === short.id;
+                const viewsLabel = formatViews(short.views);
+
+                return (
+                  <article className="youtube-short-card" key={short.id}>
+                    <div className="youtube-short-card__media">
+                      {isPlaying ? (
+                        <iframe
+                          title={short.title}
+                          src={`${short.embedUrl}?autoplay=1&rel=0`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          loading="lazy"
+                        />
+                      ) : (
+                        <button
+                          type="button"
+                          className="youtube-short-card__preview"
+                          onClick={() => setActiveShortId(short.id)}
+                          aria-label={`Play Short: ${short.title}`}
+                        >
+                          <img src={short.thumbnail} alt="" loading="lazy" />
+                          <span className="youtube-short-card__badge" aria-hidden="true">
+                            Shorts
+                          </span>
+                          <span className="youtube-card__play" aria-hidden="true">
+                            <FaPlay />
+                          </span>
+                        </button>
+                      )}
+                    </div>
+                    <div className="youtube-short-card__body">
+                      <h4>
+                        <a href={short.url} target="_blank" rel="noopener noreferrer">
+                          {short.title}
+                        </a>
+                      </h4>
+                      {viewsLabel ? (
+                        <p className="youtube-card__meta">{viewsLabel}</p>
                       ) : null}
                     </div>
                   </article>
