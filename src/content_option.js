@@ -1,28 +1,28 @@
 import hiteshImg from "./assets/images/hitesh.png";
 const logotext = "HITESH";
 const meta = {
-  title: "Hitesh Dodiya | Full-Stack Developer",
+  title: "Hitesh Dodiya | AI Full-Stack Developer",
   description:
-    "Hitesh Dodiya is a full-stack developer with 7+ years of experience delivering SaaS, AI-powered platforms, dashboards, and e-commerce products for global clients.",
+    "Hitesh Dodiya is an AI full-stack developer with 7+ years of experience delivering AI-powered platforms, SaaS products, automations, dashboards, and e-commerce experiences for global clients.",
   keywords:
-    "Full-stack developer, MERN developer, React developer, Next.js developer, Node.js developer, SaaS development, AI integration, AI automation, workflow automation, dashboard development, e-commerce development, freelance developer",
+    "AI full-stack developer, AI developer, AI automation, AI integration, workflow automation, SaaS development, React developer, Node.js developer, dashboard development, e-commerce development, freelance developer",
   siteUrl: "https://hitesh-dodiya.netlify.app/",
 };
 
 const introdata = {
-  title: "Full-Stack Engineer for Product-Focused Teams",
+  title: "AI Full-Stack Developer for Product-Focused Teams",
   animated: {
-    first: "Modern web apps with premium UX",
-    second: "Scalable MERN & Next.js architecture",
+    first: "AI-powered products with premium UX",
+    second: "End-to-end AI full-stack delivery",
     third: "Reliable delivery for startups and agencies",
   },
   description:
-    "I help companies launch and improve SaaS products, AI tools, dashboards, and e-commerce experiences. My approach combines clean UI, strong performance, and maintainable full-stack code so your product looks professional and grows without rework.",
+    "I help companies launch and improve AI-powered products, SaaS platforms, automations, dashboards, and e-commerce experiences. My approach combines practical AI systems, clean UI, strong performance, and maintainable full-stack code so your product looks professional and grows without rework.",
   your_img_url: hiteshImg,
 };
 
 const serviceHighlights = [
-  "SaaS & dashboard development",
+  "AI full-stack product development",
   "AI automation & workflow orchestration",
   "E-commerce storefronts & admin panels",
   "Performance optimization & code quality",
@@ -31,7 +31,7 @@ const serviceHighlights = [
 const trustStats = [
   { label: "Years in development", value: "7+" },
   { label: "Production projects", value: "20+" },
-  { label: "Core stack", value: "MERN + Next.js" },
+  { label: "Core service", value: "AI Full Stack" },
 ];
 
 const homeServices = [
@@ -66,7 +66,7 @@ const homeServices = [
 const dataabout = {
   title: "About My Self",
   aboutme:
-    "As a full-stack developer, I specialize in building dynamic and responsive web applications using MongoDB, Express, React, and Node.js. With experience in both front-end and back-end development, I thrive on creating efficient and scalable solutions to complex problems. My expertise in JavaScript, HTML, CSS, and various libraries and frameworks enables me to deliver high-quality products that meet the needs of clients and users.",
+    "As an AI full-stack developer, I specialize in building AI-powered products, automations, and responsive web applications from frontend to backend. With experience across modern JavaScript stacks and AI workflows, I thrive on creating efficient, scalable solutions to complex problems—from LLM integrations and agent-style systems to production SaaS platforms that teams can maintain and grow.",
 };
 
 const worktimeline = [
