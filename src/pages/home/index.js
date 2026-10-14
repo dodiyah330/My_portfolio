@@ -27,14 +27,14 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Hitesh Dodiya",
-  jobTitle: "Full-Stack Developer",
+  jobTitle: "AI Full-Stack Developer",
   url: meta.siteUrl,
   sameAs: [
     "https://github.com/dodiyah330",
     socialprofils.linkedin,
     YOUTUBE_CHANNEL_URL,
   ].filter(Boolean),
-  knowsAbout: ["React", "Node.js", "Next.js", "MongoDB", "Full-Stack Development", "AI Automation", "AI Integrations"],
+  knowsAbout: ["AI Full-Stack Development", "AI Automation", "AI Integrations", "React", "Node.js", "SaaS Development"],
 };
 
 const getDocumentTheme = () =>
